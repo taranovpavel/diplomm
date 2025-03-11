@@ -1,0 +1,71 @@
+*
+    font-family: "Montserrat", sans-serif   !important
+    list-style-type: none !important
+    text-decoration: none !important
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    text-decoration: none !important  
+body
+    background-color: #eeeeee
+    height: 100%
+.swiper-pagination-bullet-active
+    background-color: #111 !important
+.swiper
+    height: 100vh
+    width: 100%
+.image
+    width: 100%
+    height: 100vh
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.swiper-button-prev,
+.swiper-button-next 
+    color: #eee !important
+    font-size: 10px !important
+    width: 50px !important
+    height: 50px 
+.swiper-button-prev::after,
+.swiper-button-next::after 
+    font-size: 30px !important 
+.swiper-button-prev
+    left: 7px !important
+.swiper-button-next
+    left: 437px !important
+.swiperSmall
+    @media (max-width: 890px )
+        height: 340px
+.swiperBig
+    height: 600px
+    width: 480px
+    margin: 0 !important
+    padding: 40px 0 !important
+    @media (max-width: 1220px )
+        width: 100%
+        padding: 20px 0 !important
+    @media (max-width: 500px )
+        height: 360px
+.imageBig
+    width: 100%
+    height: 350px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+.var_on
+    border: 1px #eee solid 
+    height: 38px
+    width: 38px
+    padding: 0 11px
+    display: flex
+    align-items: center
+    cursor: pointer
+    background-color: #111
+    transition: 0.3s
+    &:hover
+        background-color: #eee
+        color: #111
+.var_off
+    display: none
+    

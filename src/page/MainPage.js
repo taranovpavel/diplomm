@@ -3,10 +3,10 @@ import classes from "./MainPage.module.sass";
 import Header from '../components/Header';
 import img1 from '../images/img-1.webp'
 import img2 from '../images/img-2.webp'
-import img3 from '../images/img-3.webp'
-import img4 from '../images/img-4.webp'
+
+
 import img5 from '../images/img-5.webp'
-import img6 from '../images/img-6.webp'
+
 import img7 from '../images/img-7.webp'
 import img8 from '../images/img-8.webp'
 import img9 from '../images/img-9.webp'
@@ -21,7 +21,7 @@ import MapLocalComponent from '../components/MapLocalComponent';
 import Footer from '../components/Footer';
 
 const MainPage = () => {
-    const imgs = [img2,img3,img4,img5,img6,img7,img8,img9,img11]
+    const imgs = [img2,img5,img7,img8,img9,img11]
     const photos = [
         {id: 0, img: hotel1, title: "Делюкс", text: "Прежде чем отправиться на утреннюю прогулку по городу, выйдите на террасу номера"},
         {id: 1, img: hotel1, title: "Делюкс", text: "Прежде чем отправиться на утреннюю прогулку по городу, выйдите на террасу номера"},

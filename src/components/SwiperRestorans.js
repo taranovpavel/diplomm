@@ -1,11 +1,11 @@
 import React from 'react';
+import classes from './SwiperRestorans.module.sass'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import classes from "./SwiperCards.module.sass"
 import "swiper/css";
 import "swiper/css/navigation";
 
-const SwiperCards = ({photos}) => {
+const SwiperRestorans = ({photos}) => {
     return (
         <Swiper
           loop={true}
@@ -18,9 +18,11 @@ const SwiperCards = ({photos}) => {
               <div className={classes.Carousel__card}>
                 <div className={classes.Carousel__card__imgContainer}>
                   <div className={classes.Carousel__card__imgContainer__img} style={{backgroundImage: `url(${item.img})`}}/>
+                  <div className={classes.Carousel__card__imgContainer__info}>
+                    <p className={classes.Carousel__card__imgContainer__info__label}>{item.label}</p>
+                    <p className={classes.Carousel__card__imgContainer__info__text}>{item.text}</p>
+                  </div>
                 </div>
-                <p className={classes.Carousel__card__label}>{item.label}</p>
-                <p className={classes.Carousel__card__text}>{item.text}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -28,4 +30,4 @@ const SwiperCards = ({photos}) => {
     );
 };
 
-export default SwiperCards;
+export default SwiperRestorans;

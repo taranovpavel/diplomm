@@ -8,6 +8,10 @@ import hotel1 from '../images/img-hotelRoom1.jpg'
 import Collage from '../components/Collage';
 import Carousel from '../components/Carousel';
 import Contacts from '../components/Contacts';
+import Tour from '../components/Tour';
+import img1 from '../images/img-1.webp'
+import img10 from '../images/img-10.webp'
+import SwiperRestorans from '../components/SwiperRestorans';
 const BishkekPage = () => {
     const photos = [
         {id: 0, img: hotel1, text: "Погрузитесь в атмосферу спокойствия и вдохновения, наслаждаясь видом на величественные горы прямо из вашего окна.", label: "Вид на горы"},
@@ -40,7 +44,12 @@ const BishkekPage = () => {
     const markers=[
         [42.8767,74.5980] // Бишкек
     ]
-
+    const tour={
+        label:"Экскурсия по городу и окрестностям",
+        text:"Наши профессиональные гиды ответят на все вопросы и проведут для вас увлекательную экскурсию по этому удивительному городу.",
+        img1: img1,
+        img2: img10
+    }
     return (
         <div className={classes.Main}>
             <Header isBlack={true}/>
@@ -52,10 +61,10 @@ const BishkekPage = () => {
                 <div className={classes.Main__travel__inner}>
                     <div className={classes.Main__travel__inner__left}>
                         <p className={classes.Main__travel__inner__left__label}>Покоряя вершины</p>
-                        <div className={classes.Main__travel__inner__left__img}/>
+                        <div className={classes.Main__travel__inner__left__img} style={{backgroundImage: `url(${hotel1})`}}/>
                     </div>
                     <div className={classes.Main__travel__inner__right}>
-                        <div className={classes.Main__travel__inner__right__img}/>
+                        <div className={classes.Main__travel__inner__right__img} style={{backgroundImage: `url(${hotel1})`}}/>
                         <button className={classes.Main__travel__inner__right__btn}>подробнее</button>
                     </div>
                 </div>
@@ -66,6 +75,12 @@ const BishkekPage = () => {
             <div className={classes.Main__collage}>
                 <Collage data={data}/>
             </div>
+            <div className={classes.Main__restorans}>
+                <p className={classes.Main__restorans__label}>Рестораны и бары</p>
+                <SwiperRestorans photos={photos}/>
+            </div>
+            
+            <Tour obj={tour}/>
             <Contacts adesses={contactInfo} markers={markers} zoom={14}/>
             <Footer/>
         </div>

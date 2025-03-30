@@ -2,7 +2,7 @@
     display: flex
     flex-direction: column
     &__cards
-        padding: 30px 50px 50px
+        padding: 50px
         display: flex
         flex-direction: column
         gap: 20px
@@ -10,31 +10,50 @@
             font-size: 32px
             font-weight: 700
     &__travel
-        margin: 0 auto
-        padding: 50px 0 100px
+        width: 100%
+        padding: 0 0 50px
         &__inner
             display: flex
-            gap: 50px
+            gap: 20px
+            width: 100%
+            height: 767px
+            position: relative
             &__left
                 display: flex
                 flex-direction: column
-                gap: 38px
+                gap: 15px
                 display: flex
+                right: 51%
+                position: absolute
+                align-items: end
                 &__img
-                    background-color: #00ff00
-                    width: 528px
-                    height: 900px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    width: 426px
+                    height: 700px
+                    transition: 0.3s
+                    cursor: pointer
                 &__label
-                    font-size: 52px
+                    font-size: 42px
                     font-weight: 700
+                &:hover
+                    .Main__travel__inner__left__img   
+                        width: 726px
             &__right
                 display: flex
                 flex-direction: column
-                gap: 50px
+                gap: 20px
+                left: 51%
+                position: absolute
                 &__img
-                    background-color: #ffee00
-                    width: 528px
-                    height: 700px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    width: 426px
+                    height: 600px
+                    transition: 0.3s
+                    cursor: pointer
                 &__btn   
                     padding: 8px 14px
                     font-size: 18px
@@ -44,8 +63,20 @@
                     cursor: pointer
                     transition: 0.3s
                     height: 50px
+                    width: 426px
                     &:hover
                         background-color: #00000000
                         color: #111
                     &:active
-                        scale: 1.05             
+                        scale: 1.05    
+                &:hover
+                    .Main__travel__inner__right__img   
+                        width: 726px                 
+    &__restorans
+        padding: 0 50px 50px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &__label
+            font-size: 32px
+            font-weight: 700                    

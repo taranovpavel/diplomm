@@ -2,7 +2,7 @@
     display: flex
     flex-direction: column
     &__cards
-        padding: 30px 50px 0px
+        padding: 50px
         display: flex
         flex-direction: column
         gap: 20px
@@ -12,7 +12,8 @@
     &__lake
         padding: 0 50px 50px 
         &__inner
-            height: 800px
+            width: 100%
+            height: 600px
             position: relative
             overflow: hidden
             background-position: center
@@ -20,20 +21,41 @@
             background-size: cover
             &__bg
                 position: absolute
-                width: 800px
+                width: 700px
                 height: 1200px
                 rotate: 30deg
-                background-color: #0069a7
+                background-color: #0076bb
                 top: -280px
-                left: -200px
+                left: -230px
+                transition: 0.3s
+                z-index: 3
+            &__bg1
+                position: absolute
+                width: 700px
+                height: 1200px
+                rotate: 30deg
+                background-color: #00588b
+                top: -280px
+                left: -230px
+                transition: 0.3s
+                z-index: 2
+            &__bg2
+                position: absolute
+                width: 700px
+                height: 1200px
+                rotate: 30deg
+                background-color: #00273d
+                top: -280px
+                left: -230px
+                transition: 0.3s        
             &__info   
                 position: absolute
-                z-index: 2 
+                z-index: 4 
                 display: flex
                 flex-direction: column
                 gap: 30px
-                top: 70px
-                left: 100px
+                top: 30px
+                left: 50px
                 &__label
                     font-size: 42px
                     font-weight: 700
@@ -57,4 +79,18 @@
                         color: #eee
                     &:active
                         scale: 1.05   
-                     
+            &:hover
+                .Main__lake__inner__bg
+                    left: -200px
+                .Main__lake__inner__bg1
+                    left: -160px
+                .Main__lake__inner__bg2
+                    left: -120px    
+    &__restorans
+        padding: 0 50px 50px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &__label
+            font-size: 32px
+            font-weight: 700                

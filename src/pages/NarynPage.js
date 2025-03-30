@@ -7,6 +7,8 @@ import SwiperCards from '../components/SwiperCards';
 import Collage from '../components/Collage';
 import Carousel from '../components/Carousel';
 import Contacts from '../components/Contacts';
+import Tour from '../components/Tour';
+import SwiperRestorans from '../components/SwiperRestorans';
 const NarynPage = () => {
     const photos = [
         {id: 0, img: hotel1, text: "Откройте для себя тишину и величие Нарына, наслаждаясь видами гор, которые создают уникальную атмосферу уединения и спокойствия.", label: "Гармония с природой"},
@@ -44,6 +46,12 @@ const NarynPage = () => {
     const markers=[
         [41.4287, 76.0005]  // Нарын
     ]
+    const tour={
+        label:"",
+        text:"",
+        img1: hotel1,
+        img2: hotel1
+    }
     return (
         <div className={classes.Main}>
             <Header isBlack={true}/>
@@ -55,6 +63,11 @@ const NarynPage = () => {
             <div className={classes.Main__rooms}>
                 <Carousel photos={hotels}/>
             </div>
+            <div className={classes.Main__restorans}>
+                <p className={classes.Main__restorans__label}>Рестораны и бары</p>
+                <SwiperRestorans photos={photos}/>
+            </div>
+            <Tour obj={tour}/>
             <div className={classes.Main__imgs}>
                 <div className={classes.Main__imgs__inner}>
                     {info.map((item)=>(

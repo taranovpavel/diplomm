@@ -9,6 +9,9 @@ import { useEffect, useState, useRef } from "react";
 import Collage from '../components/Collage';
 import Carousel from '../components/Carousel';
 import Contacts from '../components/Contacts';
+import Container from '../components/Container';
+import SwiperRestorans from '../components/SwiperRestorans';
+import Tour from '../components/Tour';
 const IssykKulPage = () => {
     const photos = [
         { id: 0, img: IKtop,  label: "5 минут до озера", text: "Прогулка до озера займет всего 5 минут, и вы окажетесь на берегу Иссык-Куля, готовые насладиться его красотой." },
@@ -40,6 +43,12 @@ const IssykKulPage = () => {
     const markers=[
         [42.6490, 77.0850] // Иссык-Куль
     ]
+    const tour={
+        label:"",
+        text:"",
+        img1: hotel1,
+        img2: hotel1
+    }
     return (
         <div className={classes.Main}>
             <Header isBlack={true}/>
@@ -48,19 +57,28 @@ const IssykKulPage = () => {
                 <SwiperCards photos={photos}/>
             </div>
             <div className={classes.Main__lake} >
-                <div className={classes.Main__lake__inner} style={{backgroundImage: `url(${IKtop})`}}>
-                    <div className={classes.Main__lake__inner__info}>
-                        <p className={classes.Main__lake__inner__info__label}>Жемчужина Кыргызстана</p>
-                        <p className={classes.Main__lake__inner__info__text}>Окруженное величественными Тянь-Шаньскими горами, озеро Иссык-Куль — это уникальный уголок природы, где кристально чистая вода встречается с бескрайним небом. Его бирюзовые волны хранят древние легенды, а мягкий климат делает это место идеальным для отдыха в любое время года.</p>
-                        <button className={classes.Main__lake__inner__info__btn}>забронировать номер</button>
+                <Container inner={
+                    <div className={classes.Main__lake__inner} style={{backgroundImage: `url(${IKtop})`}}>
+                        <div className={classes.Main__lake__inner__info}>
+                            <p className={classes.Main__lake__inner__info__label}>Жемчужина Кыргызстана</p>
+                            <p className={classes.Main__lake__inner__info__text}>Окруженное величественными Тянь-Шаньскими горами, озеро Иссык-Куль — это уникальный уголок природы, где кристально чистая вода встречается с бескрайним небом. Его бирюзовые волны хранят древние легенды, а мягкий климат делает это место идеальным для отдыха в любое время года.</p>
+                            <button className={classes.Main__lake__inner__info__btn}>забронировать номер</button>
+                        </div>
+                        <div className={classes.Main__lake__inner__bg}/>
+                        <div className={classes.Main__lake__inner__bg1}/>
+                        <div className={classes.Main__lake__inner__bg2}/>
                     </div>
-                    <div className={classes.Main__lake__inner__bg}/>
-                </div>
+                }/>
             </div>
             <div className={classes.Main__rooms}>
                 <Carousel photos={hotels}/>
             </div>
             <Collage data={data}/>
+            <div className={classes.Main__restorans}>
+                <p className={classes.Main__restorans__label}>Рестораны и бары</p>
+                <SwiperRestorans photos={photos}/>
+            </div>
+            <Tour obj={tour}/>
             <Contacts adesses={contactInfo} markers={markers} zoom={14}/>
             <Footer/>
         </div>

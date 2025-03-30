@@ -1,7 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import classes from "./MainPage.module.sass";
 import Header from '../components/Header';
-import img1 from '../images/img-1.webp'
+import { Link as ScrollLink, Element } from 'react-scroll';
 import img2 from '../images/img-2.webp'
 
 
@@ -44,6 +44,26 @@ const MainPage = () => {
         [42.6490, 77.0850], // Иссык-Куль
         [41.4287, 76.0005]  // Нарын
     ]
+    const cards = [
+        {
+            label: "Бишкек",
+            text: "История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.",
+            img: img11,
+            link: "/bishkek"
+        },
+        {
+            label: "Иссык-Куль",
+            text: "История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.",
+            img: img11,
+            link: "/issyk-Kul"
+        },
+        {
+            label: "Нарын",
+            text: "История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.",
+            img: img11,
+            link: "/naryn"
+        }
+    ]
     return (
         <div className={classes.Main}>
             <div className={classes.pipz}>
@@ -59,76 +79,36 @@ const MainPage = () => {
                     </div>
                 }/>
             </div>
-            <div className={classes.Main__hotels}>
+            <Element className={classes.Main__hotels}>
                 <Container inner={
                     <div className={classes.Main__hotels__inner}>
                         <p className={classes.Main__hotels__inner__H}>Изумительные отели в красивейших уголках Кыргызстана</p>
                         <div className={classes.Main__hotels__inner__cards}>
-                            <Link to={"/Bishkek"} className={classes.Main__hotels__inner__cards__card}>
-                                <div className={classes.Main__hotels__inner__cards__card__imgContainer}>
-                                    <div className={classes.Main__hotels__inner__cards__card__imgContainer__img} style={{backgroundImage: `url(${img11})`}}/>
-                                </div>
-                                <div className={classes.Main__hotels__inner__cards__card__container}>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__H}>Бишкек</p>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__text}>История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.</p>
-                                    <button className={classes.Main__hotels__inner__cards__card__container__button}>Подробнее</button>
-                                </div>
-                            </Link>
-                            <Link to={"/Issyk-Kul"} className={classes.Main__hotels__inner__cards__card}>
-                                <div className={classes.Main__hotels__inner__cards__card__imgContainer}>
-                                    <div className={classes.Main__hotels__inner__cards__card__imgContainer__img} style={{backgroundImage: `url(${img11})`}}/>
-                                </div>
-                                <div className={classes.Main__hotels__inner__cards__card__container}>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__H}>Иссык-Куль</p>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__text}>История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.</p>
-                                    <button className={classes.Main__hotels__inner__cards__card__container__button}>Подробнее</button>
-                                </div>
-                            </Link>
-                            <Link to={"/Naryn"} className={classes.Main__hotels__inner__cards__card}>
-                                <div className={classes.Main__hotels__inner__cards__card__imgContainer}>
-                                    <div className={classes.Main__hotels__inner__cards__card__imgContainer__img} style={{backgroundImage: `url(${img11})`}}/>
-                                </div>
-                                <div className={classes.Main__hotels__inner__cards__card__container}>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__H}>Нарын</p>
-                                    <p className={classes.Main__hotels__inner__cards__card__container__text}>История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.</p>
-                                    <button className={classes.Main__hotels__inner__cards__card__container__button}>Подробнее</button>
-                                </div>
-                            </Link>
+                            {cards.map((obj,idx)=>(
+                                <Link key={idx} to={obj.link} className={classes.Main__hotels__inner__cards__card}>
+                                    <div className={classes.Main__hotels__inner__cards__card__imgContainer}>
+                                        <div className={classes.Main__hotels__inner__cards__card__imgContainer__img} style={{backgroundImage: `url(${obj.img})`}}/>
+                                    </div>
+                                    <div className={classes.Main__hotels__inner__cards__card__container}>
+                                        <p className={classes.Main__hotels__inner__cards__card__container__H}>{obj.label}</p>
+                                        <p className={classes.Main__hotels__inner__cards__card__container__text}>{obj.text}</p>
+                                        <button className={classes.Main__hotels__inner__cards__card__container__button}>Подробнее</button>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 }/>    
-            </div>
+            </Element>
             <div className={classes.Main__rooms}>
                 <Carousel photos={photos}/>    
-            </div>
-            <div className={classes.Main__tour}>
-                <Container inner={
-                    <div className={classes.Main__tour__inner}>
-                        <div className={classes.Main__tour__inner__left}>
-                            <p className={classes.Main__tour__inner__left__label}>Экскурсия по городу и окрестностям</p>
-                            <p className={classes.Main__tour__inner__left__text}>Наши профессиональные гиды ответят на все вопросы и проведут для вас увлекательную экскурсию по этому удивительному городу.</p>
-                            <div className={classes.Main__tour__inner__left__btn}>
-                                <p>Подробнее</p>
-                                <div className={classes.Main__tour__inner__left__btn__br}/>
-                            </div>
-                        </div>
-                        <div className={classes.Main__tour__inner__right}>
-                            <div className={classes.Main__tour__inner__right__one}>
-                                <div className={classes.Main__tour__inner__right__one__inner} style={{backgroundImage: `url(${img10})`}}/>
-                            </div>
-                            <div className={classes.Main__tour__inner__right__two}>
-                                <div className={classes.Main__tour__inner__right__two__inner} style={{backgroundImage: `url(${img1})`}}/>
-                            </div>
-                        </div>
-                    </div>
-                }/>
             </div>
             <div className={classes.Main__restorans}>
                 <Container inner={
                     <div className={classes.Main__restorans__inner}>
                         <div className={classes.Main__restorans__inner__left}>
                             <p className={classes.Main__restorans__inner__left__label}>Рестораны и бары</p>
-                            <p className={classes.Main__restorans__inner__left__text}>Идеальное расположение в самом сердце города, соседство с удивительным Исаакиевским собором – все это превращает Four Seasons Hotel Lion Palace St. Petersburg в излюбленное место для тех, кто ценит изысканные рестораны.</p>
+                            <p className={classes.Main__restorans__inner__left__text}>Мы работаем с лучшими ресторанами национальной кухни, где традиционные рецепты сочетаются с высоким качеством. Наслаждайтесь аутентичными блюдами в уютной обстановке или заказывайте их с доставкой прямо в ваш номер.</p>
                             <div className={classes.Main__restorans__inner__left__btns}>
                                 <div className={classes.Main__restorans__inner__left__btns__btn}>
                                     <div className={classes.Main__restorans__inner__left__btns__btn__brTop}/>
@@ -137,12 +117,12 @@ const MainPage = () => {
                                 </div>
                                 <div className={classes.Main__restorans__inner__left__btns__btn}>
                                     <div className={classes.Main__restorans__inner__left__btns__btn__brTop}/>
-                                    <p>NAVAT</p>
+                                    <p>FRUNZE</p>
                                     <div className={classes.Main__restorans__inner__left__btns__btn__brBottom}/>
                                 </div>
                                 <div className={classes.Main__restorans__inner__left__btns__btn}>
                                     <div className={classes.Main__restorans__inner__left__btns__btn__brTop}/>
-                                    <p>NAVAT</p>
+                                    <p>IWA BAR</p>
                                     <div className={classes.Main__restorans__inner__left__btns__btn__brBottom}/>
                                 </div>
                             </div>
@@ -151,9 +131,9 @@ const MainPage = () => {
                             <div className={classes.Main__restorans__inner__right__inner} style={{backgroundImage: `url(${restoran})`}}/>
                             <div className={classes.Main__restorans__inner__right__br}/>
                         </div>
-                        <div className={classes.Main__restorans__inner__btn}>
-                            <p>посмотреть все рестораны</p>
-                        </div>
+                        <ScrollLink smooth={true} duration={500} to={classes.Main__hotels} className={classes.Main__restorans__inner__btn}>
+                            <p>подробнее на страницах отелей</p>
+                        </ScrollLink>
                     </div>    
                 }/>
             </div>

@@ -37,7 +37,7 @@ const Header = ({isBlack = false}) => {
                         <p onClick={()=>{dispatch(setLang("EN"));dispatch(setIsLang());navigate("/en")}} className={isLang?"var_on":"var_off"}>EN</p>
                         <p onClick={()=>{dispatch(setLang("KG"));dispatch(setIsLang());navigate("/kg")}} className={isLang?"var_on":"var_off"}>KG</p>
                     </div>
-                    <button className={classes.Header__inner__button}>Забронировать</button>
+                    <Link to="/book" className={classes.Header__inner__button}>Забронировать</Link>
                 </div>
             }/>
             <div className={isMenu?classes.Header__menu:classes.Header__menu__off}>

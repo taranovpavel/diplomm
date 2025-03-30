@@ -1,0 +1,51 @@
+.Main
+    display: flex
+    flex-direction: column
+    &__cards
+        padding: 30px 50px 50px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &__label
+            font-size: 32px
+            font-weight: 700
+    &__travel
+        margin: 0 auto
+        padding: 50px 0 100px
+        &__inner
+            display: flex
+            gap: 50px
+            &__left
+                display: flex
+                flex-direction: column
+                gap: 38px
+                display: flex
+                &__img
+                    background-color: #00ff00
+                    width: 528px
+                    height: 900px
+                &__label
+                    font-size: 52px
+                    font-weight: 700
+            &__right
+                display: flex
+                flex-direction: column
+                gap: 50px
+                &__img
+                    background-color: #ffee00
+                    width: 528px
+                    height: 700px
+                &__btn   
+                    padding: 8px 14px
+                    font-size: 18px
+                    border: 1px #111 solid  
+                    background-color: #111
+                    color: #eee
+                    cursor: pointer
+                    transition: 0.3s
+                    height: 50px
+                    &:hover
+                        background-color: #00000000
+                        color: #111
+                    &:active
+                        scale: 1.05             

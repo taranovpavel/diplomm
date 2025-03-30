@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
-const MapLocalComponent = () => {
-  const markers=[
-    [42.8746, 74.5698], // Бишкек
-    [42.6490, 77.0850], // Иссык-Куль
-    [41.4287, 76.0005]  // Нарын
-  ]
+const MapLocalComponent = ({markers,zoom}) => {
+  console.log(markers.length);
   let x = 0
   let y = 0
   markers.map((item)=>{
@@ -18,8 +14,8 @@ const MapLocalComponent = () => {
       <div>
         <Map
           defaultState={{
-            center: [x/3,y/3], // Центрируем карту по первой метке
-            zoom: 7,
+            center: [x/markers.length,y/markers.length], 
+            zoom: zoom,
           }}
           width="100%"
           height="400px"

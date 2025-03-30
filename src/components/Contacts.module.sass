@@ -1,0 +1,39 @@
+.Contacts
+    padding: 0 0 50px
+    &__inner
+        display: flex
+        gap: 30px
+        justify-content: start
+        // align-items: center
+        &__left
+            width: 720px 
+            border: 2px solid #111            
+        &__right
+            display: flex
+            flex-direction: column
+            gap: 20px 
+            font-size: 18px
+            padding: 20px 0
+            &__label
+                font-size: 32px
+                font-weight: 700  
+            &__br
+                height: 1px
+                width: 100%
+                background-color: #111     
+            &__btn
+                width: 100%
+                padding: 20px 0 
+                background-color: #111
+                color: #eee
+                display: flex
+                flex-direction: column
+                align-items: center
+                transition: 0.3s
+                cursor: pointer
+                &:hover
+                    background-color: #eee
+                    color: #111
+                    border: #111 solid 1px
+                &:active
+                    scale: 1.05    

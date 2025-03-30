@@ -1,0 +1,55 @@
+.Main
+    display: flex
+    flex-direction: column
+    &__cards
+        padding: 30px 50px 0px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &__label
+            font-size: 32px
+            font-weight: 700
+    &__imgs
+        padding: 50px 
+        &__inner
+            display: flex
+            justify-content: space-between
+            width: 100%
+            gap: 20px
+            &__card
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+                width: 100%
+                height: 540px
+                transition: 0.5s
+                position: relative
+                overflow: hidden
+                &__info
+                    position: absolute
+                    top: 471px
+                    background-color: #111111a4
+                    padding: 20px 30px
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+                    transition: 0.5s
+                    width: 100%
+                    &__label
+                        display: flex
+                        gap: 10px
+                        &__text
+                            font-size: 24px
+                            font-weight: 700
+                            color: #eee
+                            
+                        &__icon
+                    &__text
+                        color: #eee
+                        width: 540px
+                &:hover
+                    width: 339%
+                    .Main__imgs__inner__card__info
+                        top: 372px  
+                                        
+  

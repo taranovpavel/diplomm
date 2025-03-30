@@ -1,0 +1,60 @@
+.Main
+    display: flex
+    flex-direction: column
+    &__cards
+        padding: 30px 50px 0px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        &__label
+            font-size: 32px
+            font-weight: 700
+    &__lake
+        padding: 0 50px 50px 
+        &__inner
+            height: 800px
+            position: relative
+            overflow: hidden
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            &__bg
+                position: absolute
+                width: 800px
+                height: 1200px
+                rotate: 30deg
+                background-color: #0069a7
+                top: -280px
+                left: -200px
+            &__info   
+                position: absolute
+                z-index: 2 
+                display: flex
+                flex-direction: column
+                gap: 30px
+                top: 70px
+                left: 100px
+                &__label
+                    font-size: 42px
+                    font-weight: 700
+                    color: #eee
+                &__text
+                    width: 500px
+                    font-size: 18px
+                    color: #eee
+                &__btn    
+                    width: 300px        
+                    padding: 8px 14px
+                    font-size: 18px
+                    border: 1px #eee solid  
+                    background-color: #eee
+                    color: #111
+                    cursor: pointer
+                    transition: 0.3s
+                    height: 50px
+                    &:hover
+                        background-color: #00000000
+                        color: #eee
+                    &:active
+                        scale: 1.05   
+                     

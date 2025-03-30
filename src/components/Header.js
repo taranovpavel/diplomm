@@ -8,7 +8,7 @@ import { ReactComponent as Cross} from "../images/icon-Cross.svg"
 import { useDispatch , useSelector } from 'react-redux';
 import { setIsLang, setIsMenu, setLang } from '../redux/HeaderSlice';
 import { useNavigate } from "react-router-dom"
-const Header = () => {
+const Header = ({isBlack = false}) => {
     const {lang, isLang, isMenu} = useSelector(state => state.HeaderReducer)
     const navigate = useNavigate();
     const dispatch = useDispatch()
@@ -22,13 +22,12 @@ const Header = () => {
         // document.body.style.paddingRight = `0px`
     }
     return (
-        <div className={classes.Header} style={{backgroundColor: `${isMenu?"#111":""}`}}>
+        <div className={classes.Header} style={{backgroundColor: `${isMenu?"#111":""}`,backgroundColor: `${isBlack?"#111":""}`}} >
             <Container inner = {
                 <div className={classes.Header__inner}>
-                    
                     <button onClick={()=>{dispatch(setIsMenu())}} className={classes.Header__inner__menu}>Меню</button>
                     <div className={classes.Header__inner__line_L}/>
-                    <Logo className={classes.Header__inner__logo}/>
+                    <Link to={"/"}><Logo className={classes.Header__inner__logo}/></Link>
                     <div className={classes.Header__inner__line_R}/>
                     <div onMouseEnter={()=>{dispatch(setIsLang())}} onMouseLeave={()=>{dispatch(setIsLang())}} className={classes.Header__inner__translate}>
                         <div  className={classes.Header__inner__translate__active}>

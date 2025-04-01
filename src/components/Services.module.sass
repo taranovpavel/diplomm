@@ -1,0 +1,255 @@
+.Main
+    padding: 0 0 50px
+    &__inner
+        display: flex
+        flex-direction: column
+        gap: 30px
+        width: 100%     
+        position: relative
+        &__hotel
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 1000px
+            &__img
+                width: 475px
+                height: 260px
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+            &__info
+                width: 500px
+                padding: 0 20px  
+                display: flex
+                flex-direction: column
+                gap: 12px
+                &__label
+                    font-size: 32px
+                    font-weight: 700
+                &__bottom
+                    display: flex
+                    align-items: center
+                    gap: 20px   
+                &__about
+                    font-size: 12px    
+        &__hotelImprove
+            display: flex
+            flex-direction: column
+            gap: 10px
+            width: 1000px
+            &__inner
+                display: flex
+                align-items: center
+                justify-content: space-between
+                width: 1000px
+                border: 2px solid #ff7300
+                &__img
+                    width: 475px
+                    height: 260px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                &__info
+                    width: 500px
+                    padding: 0 20px  
+                    display: flex
+                    flex-direction: column
+                    gap: 12px
+                    &__label
+                        font-size: 32px
+                        font-weight: 700
+                    &__bottom
+                        display: flex
+                        align-items: center
+                        gap: 20px   
+                    &__about
+                        font-size: 12px
+            &__label
+                display: flex
+                gap: 10px
+                align-items: center
+                &__arrow
+                    background-color: #ff7300   
+                    color: #eee
+                    padding: 6px 9px 
+                    width: 33px
+                    height: 33px   
+                p
+                    font-size: 22px          
+                    font-weight: 700
+            &__bottom
+                display: flex
+                align-items: center 
+                width: 100%       
+                justify-content: end
+                gap: 20px
+                transition: 0.3s
+                &__left
+                    display: flex
+                    flex-direction: column
+                    align-items: end
+                    &__price
+                        font-size: 24px
+                        font-weight: 700
+                        color: #ff7300
+                    &__text 
+                &__btn
+                    padding: 8px 14px
+                    font-size: 18px
+                    border: 1px #111 solid  
+                    background-color: #111
+                    color: #eee
+                    cursor: pointer
+                    transition: 0.3s
+                    height: 48px
+                    &:hover
+                        background-color: #00000000
+                        color: #111
+                    &:active
+                        scale: 1.05  
+            &__bottomS
+                display: flex
+                flex-direction: column
+                gap: 6px 
+                width: 100%       
+                text-align: end
+                transition: 0.3s
+                height: 48px
+                &__text
+                    font-size: 18px
+                    font-weight: 700
+                    color: #ff7300
+                &__btn
+                    cursor: pointer
+                    font-size: 12px
+        &__bill
+            display: flex
+            flex-direction: column
+            gap: 10px
+            position: absolute                
+            right: 0
+            top: 0
+            width: 280px
+            background-color: #111
+            padding: 20px
+            &__label
+                font-size: 22px
+                font-weight: 700
+                width: 100%
+                color: #eee
+            &__days
+                color: #eee
+            &__date
+                display: flex
+                gap: 10px
+                position: relative
+                &__inner
+                    display: flex
+                    flex-direction: column
+                    gap: 2px
+                    &__top
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        &__left
+                            display: flex
+                            align-items: baseline
+                            gap: 4px
+                            &__num
+                                color: #eee
+                                font-size: 24px
+                                font-weight: 700
+                            &__months
+                                color: #eee 
+                        &__line
+                           width: 36px
+                           height: 2px
+                           background-color: #eee    
+                    p
+                        color: #eee      
+            p
+                color: #eee 
+            &__btn  
+                padding: 8px 14px
+                font-size: 18px
+                border: 1px #eee solid  
+                background-color: #eee
+                color: #111
+                cursor: pointer
+                transition: 0.3s
+                height: 40px
+                &:hover
+                    background-color: #00000000
+                    color: #eee
+                &:active
+                    scale: 1.05 
+        &__breakfast
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 1000px
+            border: 2px solid #ff7300
+            width: 1000px
+            &__img
+                width: 475px
+                height: 260px
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+            &__info
+                width: 500px
+                padding: 0 20px  
+                display: flex
+                flex-direction: column
+                gap: 12px
+                &__label
+                    font-size: 32px
+                    font-weight: 700    
+            &__bottom
+                display: flex
+                align-items: center 
+                width: 100%       
+                justify-content: end
+                gap: 20px
+                transition: 0.3s
+                width: 1000px
+                &__left
+                    display: flex
+                    flex-direction: column
+                    align-items: end
+                    &__price
+                        font-size: 24px
+                        font-weight: 700
+                        color: #ff7300
+                    &__text 
+                &__btn
+                    padding: 8px 14px
+                    font-size: 18px
+                    border: 1px #111 solid  
+                    background-color: #111
+                    color: #eee
+                    cursor: pointer
+                    transition: 0.3s
+                    height: 48px
+                    &:hover
+                        background-color: #00000000
+                        color: #111
+                    &:active
+                        scale: 1.05  
+            &__bottomS
+                display: flex
+                flex-direction: column
+                gap: 6px 
+                width: 100%       
+                text-align: end
+                transition: 0.3s
+                height: 48px
+                width: 1000px
+                &__text
+                    font-size: 18px
+                    font-weight: 700
+                    color: #ff7300
+                &__btn
+                    cursor: pointer
+                    font-size: 12px
+

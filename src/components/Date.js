@@ -7,11 +7,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import Container from './Container';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
-dayjs.locale('ru');
-const Date = ({daysDifference, setDaysDifference, currency, setCurrency}) => {
-    const [firstDate, setFirstDate] = useState(null); // Дата из первого пикера
-    const [secondDate, setSecondDate] = useState(null); // Дата из второго пикера
-    const [isSecondDatePickerEnabled, setIsSecondDatePickerEnabled] = useState(false); // Состояние для включения второго пикера
+
+dayjs.locale("ru")
+
+const Date = ({ isReadOnly,firstDate, setFirstDate, secondDate, setSecondDate, setDaysDifference, currency, setCurrency}) => {
+    // const [isSecondDatePickerEnabled, setIsSecondDatePickerEnabled] = useState(false); // Состояние для включения второго пикера
 
     // Функция для блокировки дат до текущего дня
     const disablePastDates = (date) => {
@@ -46,7 +46,7 @@ const Date = ({daysDifference, setDaysDifference, currency, setCurrency}) => {
         <div className={classes.Main}>
             <Container inner={
                 <div className={classes.Main__inner}>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
                         <div className={classes.Main__inner__left}>
                             <DatePicker
                                 label="Дата заезда"
@@ -54,14 +54,16 @@ const Date = ({daysDifference, setDaysDifference, currency, setCurrency}) => {
                                 onChange={(newValue) => {
                                     setFirstDate(newValue);
                                     setSecondDate(newValue.add(1, 'day'))
-                                    setIsSecondDatePickerEnabled(true); // Включаем второй пикер после выбора первой даты
+                                    // setIsSecondDatePickerEnabled(true); // Включаем второй пикер после выбора первой даты
                                 }}
+                                readOnly = {isReadOnly}
                                 shouldDisableDate={disablePastDates} // Блокировка дат до текущего дня
                                 renderInput={(params) => <TextField {...params} />}
                             />
                             <DatePicker
                                 label="Дата отъезда"
                                 value={secondDate}
+                                readOnly = {isReadOnly}
                                 onChange={(newValue) => {
                                     setSecondDate(newValue);
                                 }}
@@ -72,7 +74,7 @@ const Date = ({daysDifference, setDaysDifference, currency, setCurrency}) => {
                                     ); // Блокировка дат до первой выбранной даты и той же даты, что и в первом
                                 }}
                                 renderInput={(params) => <TextField {...params} />}
-                                disabled={!isSecondDatePickerEnabled} // Отключаем второй пикер, если первая дата не выбрана
+                                // disabled={!isSecondDatePickerEnabled} // Отключаем второй пикер, если первая дата не выбрана
                             />
                         </div>
                     </LocalizationProvider>

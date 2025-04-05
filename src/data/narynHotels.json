@@ -1,0 +1,50 @@
+[
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "353",
+      "label": "Премиум с террасой King Премиум с террасой King Премиум с террасой King",
+      "price": 300,
+      "rooms": "1"
+    },
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "53",
+      "label": "1",
+      "price": 3000,
+      "rooms": "1"
+    },
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "53",
+      "label": "2",
+      "price": 300,
+      "rooms": "1"
+    },
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "53",
+      "label": "3",
+      "price": 300,
+      "rooms": "1"
+    },
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "53",
+      "label": "4",
+      "price": 300,
+      "rooms": "1"
+    },
+    {
+      "img": "/hotel1.jpg",
+      "people": 2,
+      "meters": "53",
+      "label": "5",
+      "price": 300,
+      "rooms": "1"
+    }
+  ]

@@ -1,0 +1,150 @@
+.Main
+    width: 1300px
+    margin: 0 auto
+    padding: 0 0 0
+    position: relative
+    &__inner
+        width: 970px
+        &__top
+            padding: 30px 0 30px
+            width: 100%
+            gap: 10px 45px
+            display: flex
+            flex-wrap: wrap
+            &__input
+                height: 79px
+        &__bottom
+            width: 100%
+            padding: 30px 0 50px
+            display: flex
+            flex-direction: column
+            gap: 10px
+            &__check
+                position: relative
+                &__text
+                    position: absolute
+                    bottom: -8px
+                    left: 14px
+                    color: #D32F2F !important
+            &__pay
+                display: flex
+                flex-direction: column
+                gap: 20px
+                position: relative
+                &__header
+                    width: 100%
+                    display: flex
+                    gap: 20px
+                    align-items: center
+                    position: relative
+                    &__left
+                        padding: 12px 20px
+                        color: #eee
+                        background-color: #ff7300
+                        font-size: 18px
+                        font-weight: 700
+                    &__center
+                        display: flex
+                        flex-direction: column
+                        &__label
+                            font-size: 24px 
+                            font-weight: 700
+                        &__cards
+                            font-size: 14px
+                    &__right
+                        position: absolute
+                        right: 0
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        &__icon
+                            width: 44px
+                            height: 33px        
+                &__info
+                    width: 770px
+                    display: flex
+                    flex-direction: column
+                    gap: 10px  
+                &__price
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    width: 205px
+                    display: flex
+                    flex-direction: column
+                    gap: 10px 
+                    &__cost
+                        display: flex
+                        flex-direction: column
+                        text-align: end
+                        p
+                            // font-size: 18px
+                            // font-weight: 700
+                    button
+                        width: 100%
+                        padding: 8px 14px
+                        font-size: 18px
+                        border: 1px #111 solid  
+                        background-color: #111
+                        color: #eee
+                        cursor: pointer
+                        transition: 0.3s
+                        height: 40px
+                        &:hover
+                            background-color: #00000000
+                            color: #111
+                        &:active
+                            scale: 1.05           
+
+        &__label
+            font-size: 32px
+            font-weight: 700  
+        &__bill
+            display: flex
+            flex-direction: column
+            gap: 10px
+            position: absolute                
+            right: 0
+            top: 0
+            width: 280px
+            background-color: #111
+            padding: 20px
+            &__label
+                font-size: 22px
+                font-weight: 700
+                width: 100%
+                color: #eee
+            &__days
+                color: #eee
+            &__date
+                display: flex
+                gap: 10px
+                position: relative
+                &__inner
+                    display: flex
+                    flex-direction: column
+                    gap: 2px
+                    &__top
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        &__left
+                            display: flex
+                            align-items: baseline
+                            gap: 4px
+                            &__num
+                                color: #eee
+                                font-size: 24px
+                                font-weight: 700
+                            &__months
+                                color: #eee 
+                        &__line
+                           width: 36px
+                           height: 2px
+                           background-color: #eee    
+                    p
+                        color: #eee      
+            p
+                color: #eee 
+
+            

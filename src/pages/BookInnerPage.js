@@ -10,6 +10,10 @@ import 'dayjs/locale/ru';
 import Line from '../components/Line';
 import Services from '../components/Services';
 import Bill from '../components/Bill';
+import { useLocation } from 'react-router-dom';
+import bishkek from '../data/bishkekHotels.json'
+import naryn from '../data/narynHotels.json'
+import issykKul from '../data/issyk-kulHotels.json'
 dayjs.locale('ru');
 
 
@@ -22,15 +26,9 @@ const BookBishkekPage = () => {
     const [page, setPage] = useState(0)
     const [isImprove,setIsImprove] = useState(false)
     const [isBreakfast,setIsBreakfast] = useState(false)
-    const data = [
-        {img: hotel1, people: 2, meters: "53", label: "Премиум с террасой King Премиум с террасой King Премиум с террасой King", price: 300, rooms: "1"},
-        {img: hotel1, people: 2, meters: "53", label: "1", price: 3000, rooms: "1"},
-        {img: hotel1, people: 2, meters: "53", label: "2", price: 300, rooms: "1"},
-        {img: hotel1, people: 2, meters: "53", label: "3", price: 300, rooms: "1"},
-        {img: hotel1, people: 2, meters: "53", label: "4", price: 300, rooms: "1"},
-        {img: hotel1, people: 2, meters: "53", label: "5", price: 300, rooms: "1"}
-    ]
-    
+    const location = useLocation().pathname
+    const data = location==="/book/bishkek"?bishkek:location==="/bbok/naryn"?naryn:issykKul
+
     const text = ["Выберите номер","Закажите услуги","Введите свои данные"]
     const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня","июля", "августа", "сентября", "октября", "ноября", "декабря"];
     const [book,setBook] = useState({
@@ -42,16 +40,17 @@ const BookBishkekPage = () => {
         dayTo: dayjs(secondDate).locale("ru").format("dddd"),
         breakfastPrice: 0
     })  
-    // const book = {
-    //     numFrom: firstDate.date(),
-    //     monthFrom: monthNames[dayjs(firstDate).month()],
-    //     dayFrom: dayjs(firstDate).locale("ru").format("dddd"),
-    //     numTo: secondDate.date(),
-    //     monthTo: monthNames[dayjs(secondDate).month()],
-    //     dayTo: dayjs(secondDate).locale("ru").format("dddd")
-    // }
-    // isBreakfast={isBreakfast} setIsBreakfast={setIsBreakfast} isImprove={isImprove} setIsImprove={setIsImprove}
-    console.log(book);
+    useEffect(() => {
+        setBook(prev => ({
+          ...prev,
+          numFrom: firstDate.date(),
+          monthFrom: monthNames[dayjs(firstDate).month()],
+          dayFrom: dayjs(firstDate).locale("ru").format("dddd"),
+          numTo: secondDate.date(),
+          monthTo: monthNames[dayjs(secondDate).month()],
+          dayTo: dayjs(secondDate).locale("ru").format("dddd"),
+        }));
+      }, [firstDate, secondDate]);
     return (
         <div>
             <Header isBlack={true}/>
@@ -61,8 +60,8 @@ const BookBishkekPage = () => {
             <Line setPage={setPage} page={page} text={text}/>
             {
              page===0?<HotelsCards setRoom={setRoom} setPage={setPage} data={data} currency={currency} daysDifference={daysDifference}/>:
-             page===1?<Services setBook={setBook}  setPage={setPage} book={book} currency={currency} days={daysDifference} dataSecond={data.length<room+1?false:data[room+1]} data={data[room]}/>:
-             <Bill/>
+             page===1?<Services setBook={setBook}  setPage={setPage} book={book} currency={currency} days={daysDifference} dataSecond={data[room+1]} data={data[room]}/>:
+             <Bill book={book} currency={currency} days={daysDifference}/>
             }
             
             <Footer/>

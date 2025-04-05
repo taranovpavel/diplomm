@@ -12,7 +12,7 @@ const Header = ({isBlack = false}) => {
     const {lang, isLang, isMenu} = useSelector(state => state.HeaderReducer)
     const navigate = useNavigate();
     const dispatch = useDispatch()
-    const names = ["главная","наши отели","лучшие номера","рестораны","мероприятия","контакты","о нас"]
+    const names = [["/","Главная"],["/book","Наши отели"],["/bishkek","Бишкек"],["/issyk-kul","Исык-Куль"],["/naryn","Нарын"],["/about","О нас"]]
     if(isMenu){
         document.body.style.overflow = "hidden";
         // const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -49,10 +49,10 @@ const Header = ({isBlack = false}) => {
                     </div>
                     <ul className={classes.Header__menu__inner__list}>
                         {names.map((item,idx)=>(
-                            <li id={idx} className={classes.Header__menu__inner__list__li}>
-                                <p>{item}</p>
+                            <Link to={item[0]} id={idx} className={classes.Header__menu__inner__list__li}>
+                                <p>{item[1]}</p>
                                 <div className={classes.Header__menu__inner__list__li__br}/>
-                            </li>
+                            </Link>
                         ))}
                     </ul>
                 </div>

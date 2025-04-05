@@ -9,7 +9,7 @@ const Services = ({data,dataSecond,days,currency,book,setPage,setBook}) => {
     
     const formatNum =(number)=> {return number.toLocaleString('ru-RU')}
     console.log(dataSecond);
-    if(dataSecond!==false){
+    if(dataSecond!==undefined){
         if((book.label===undefined)||((book.label!==data.label)&&(book.label!==dataSecond.label))){
             book.label=data.label
             book.price=data.price
@@ -67,12 +67,12 @@ const Services = ({data,dataSecond,days,currency,book,setPage,setBook}) => {
                                             <p className={classes.Main__inner__hotelImprove__bottom__left__price}>+ {formatNum(currency==="$"?dataSecond.price*days-data.price*days:dataSecond.price*days*80-data.price*days*80)} {currency}</p>
                                             <p className={classes.Main__inner__hotelImprove__bottom__left__text}>за {formatStay(days)}</p>
                                         </div>
-                                        <button onClick={(()=>{setIsImprove(true);book.label=dataSecond.label;book.price=isBreakfast?dataSecond.price+breakfastPrice:dataSecond.price})} className={classes.Main__inner__hotelImprove__bottom__btn}>улучшить номер</button>
+                                        <button onClick={(()=>{setIsImprove(true);book.label=dataSecond.label;book.price=dataSecond.price})} className={classes.Main__inner__hotelImprove__bottom__btn}>улучшить номер</button>
                                     </div>
                                     :
                                     <div className={classes.Main__inner__hotelImprove__bottomS}>
                                         <p className={classes.Main__inner__hotelImprove__bottomS__text}>✓ Ваш номер обновлен</p>
-                                        <p className={classes.Main__inner__hotelImprove__bottomS__btn} onClick={(()=>{setIsImprove(false);book.label=data.label;book.price=isBreakfast?data.price+breakfastPrice:data.price})}>Вернуть предыдущий выбор</p>
+                                        <p className={classes.Main__inner__hotelImprove__bottomS__btn} onClick={(()=>{setIsImprove(false);book.label=data.label; book.price=data.price})}>Вернуть предыдущий выбор</p>
                                     </div>
                                 }
                         </div>
@@ -123,20 +123,20 @@ const Services = ({data,dataSecond,days,currency,book,setPage,setBook}) => {
                                     </div>
                                 </div>
                                 <p>{book.dayTo}</p>
-                                <p>c 15:00</p>
+                                <p>до 15:00</p>
                             </div>
                         </div>
                         <div/>
                         <p>Номер: {book.label}</p>
                         {isBreakfast?
                             <>
-                                <p>Номер: {formatNum(currency==="$"?(book.price-breakfastPrice)*days:(book.price-breakfastPrice)*days*80)}  {currency}</p>
+                                <p>Номер: {formatNum(currency==="$"?book.price*days:book.price*days*80)}  {currency}</p>
                                 <p>Завтрак: {formatNum(currency==="$"?breakfastPrice*days:breakfastPrice*days*80)}  {currency}</p>
                             </> 
                             :
                             ""                       
                         }
-                        <p>Итого: {formatNum(currency==="$"?book.price*days:book.price*days*80)} {currency}</p>
+                        <p>Итого: {formatNum(currency==="$"?(book.price+book.breakfastPrice)*days:(book.price+book.breakfastPrice)*days*80)} {currency}</p>
                         <button onClick={(()=>{setPage(2)})} className={classes.Main__inner__bill__btn}>продолжить</button>
                     </div>
                 </div>

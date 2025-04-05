@@ -2,18 +2,19 @@ import React from 'react';
 import classes from ".//Footer.module.sass"
 import Container from './Container';
 import { ReactComponent as Logo} from "../images/icon-logoWhiteText.svg"
+import { Link } from 'react-router-dom';
 const Footer = () => {
-    const names = ["главная","наши отели","лучшие номера","рестораны","мероприятия","контакты","о нас"]
+    const names = [["/","Главная"],["/book","Наши отели"],["/bishkek","Бишкек"],["/issyk-kul","Исык-Куль"],["/naryn","Нарын"],["/about","О нас"]]
     return (
         <div className={classes.Footer}>
             <Container inner={
                 <div className={classes.Footer__inner}>
                     <div className={classes.Footer__inner__top}>
                         {names.map((item,idx)=>(
-                            <div id={idx} className={classes.Footer__inner__top__btn}>
-                                <p>{item}</p>
+                            <Link to={item[0]} id={idx} className={classes.Footer__inner__top__btn}>
+                                <p>{item[1]}</p>
                                 <div className={classes.Footer__inner__top__btn__br}/>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                     <div className={classes.Footer__inner__br}/>

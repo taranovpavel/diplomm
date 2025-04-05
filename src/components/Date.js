@@ -11,37 +11,25 @@ import 'dayjs/locale/ru';
 dayjs.locale("ru")
 
 const Date = ({ isReadOnly,firstDate, setFirstDate, secondDate, setSecondDate, setDaysDifference, currency, setCurrency}) => {
-    // const [isSecondDatePickerEnabled, setIsSecondDatePickerEnabled] = useState(false); // Состояние для включения второго пикера
-
-    // Функция для блокировки дат до текущего дня
     const disablePastDates = (date) => {
         return date.isBefore(dayjs(), 'day');
     };
-
-    // Функция для блокировки дат до первой выбранной даты
     const disableDatesBeforeFirstDate = (date) => {
-        if (!firstDate) return false; // Если первая дата не выбрана, не блокировать
+        if (!firstDate) return false; 
         return date.isBefore(firstDate, 'day');
     };
-
-    // Функция для блокировки выбора той же даты, что и в первом пикере
     const disableSameDateAsFirst = (date) => {
-        if (!firstDate) return false; // Если первая дата не выбрана, не блокировать
+        if (!firstDate) return false; 
         return date.isSame(firstDate, 'day');
     };
-
-    // Переменная для хранения разницы в днях между двумя датами
-    
-
-    // Вычисление разницы в днях между первой и второй датой
     useEffect(() => {
         if (firstDate && secondDate) {
             const diff = secondDate.diff(firstDate, 'day');
-            setDaysDifference(diff); // Обновляем количество дней
+            setDaysDifference(diff); 
         } else {
-            setDaysDifference(null); // Если даты не выбраны, сбрасываем разницу
+            setDaysDifference(null); 
         }
-    }, [firstDate, secondDate]); // Запускаем вычисление только при изменении дат
+    }, [firstDate, secondDate]); 
     return (
         <div className={classes.Main}>
             <Container inner={

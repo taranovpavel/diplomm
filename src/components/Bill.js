@@ -115,7 +115,7 @@ const Bill = ({book,days,currency}) => {
         let errors = 0
         for(const key in isError){if (isError[key]){errors+=1}}
         if(errors===0){
-            dispatch(getPost(`ФИО:  ${value.name} ${value.surname}%0AНомер:  ${value.number}%0AПочта:  ${value.email}%0AГражданство:  ${value.citizenship}%0A%0AНомер:  ${book.label.en} %0AБронь с ${book.numFrom} ${book.monthFrom} до ${book.numTo} ${book.monthTo}%0AЦена завтрака ${book.breakfastPrice}%0AИтого: ${book.price} $`))
+            dispatch(getPost(`ФИО:  ${value.name} ${value.surname}%0AНомер:  ${value.number}%0AПочта:  ${value.email}%0AГражданство:  ${value.citizenship}%0A%0AНомер:  ${book.label.en} %0AБронь с ${book.numFrom} ${book.monthFrom} до ${book.numTo} ${book.monthTo}%0AЦена завтрака ${book.breakfastPrice*days} $ %0AИтого: ${book.price*days} $`))
             dispatch(setIsModal())
         }
     }

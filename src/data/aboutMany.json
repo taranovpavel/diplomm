@@ -1,0 +1,84 @@
+[
+    {
+      "label": {
+        "ru": "Экскурсия по городу и окрестностям",
+        "en": "City and Surroundings Tour",
+        "kg": "Шаар жана аймактарды саякаттоо"
+      },
+      "text": {
+        "ru": "Наши профессиональные гиды ответят на все вопросы и проведут для вас увлекательную экскурсию по этому удивительному городу.",
+        "en": "Our professional guides will answer all your questions and take you on an exciting tour of this amazing city.",
+        "kg": "Биздин профессионалдык гиддер бардык суроолоруңузга жооп берип, сизди ушул таң каларлык шаар боюнча кызыктуу экскурсияга алып барашат."
+      },
+      "btn": {
+        "ru": "Подробнее",
+        "en": "More details",
+        "kg": "Көбүрөөк маалымат"
+      },
+      "img1": "/img-1.webp",
+      "img2": "/img-10.webp"
+    },
+    {
+      "label": {
+        "ru": "Жемчужина Кыргызстана",
+        "en": "Jewel of Kyrgyzstan",
+        "kg": "Кыргызстандын алмуруттугу"
+      },
+      "text": {
+        "ru": "Окруженное величественными Тянь-Шаньскими горами, озеро Иссык-Куль — это уникальный уголок природы, где кристально чистая вода встречается с бескрайним небом. Его бирюзовые волны хранят древние легенды, а мягкий климат делает это место идеальным для отдыха в любое время года.",
+        "en": "Surrounded by the majestic Tien Shan mountains, Lake Issyk-Kul is a unique corner of nature where crystal-clear waters meet the endless sky. Its turquoise waves carry ancient legends, and the mild climate makes this place perfect for rest year-round.",
+        "kg": "Тянь-Шань тоолору менен курчалган, Ыссык-Көл — бул табияттын өзгөчө бурчу, анда тунук суулар чексиз асман менен жолугат. Анын көк-жашыл толкундары байыркы легендаларды сактайт, ал эми жумшак климат бул жерди жылдын каалаган мезгилинде дем алуу үчүн идеалдуу кылат."
+      },
+      "btn": {
+        "ru": "забронировать номер",
+        "en": "book a room",
+        "kg": "бөлмө брондоо"
+      },
+      "img": "/img-kul.webp"
+    },
+    [
+      {
+        "id": 0,
+        "img": "/img-field.webp",
+        "text": {
+          "ru": "Нарын окружен высокими горными хребтами Тянь-Шаня, а его бескрайние долины и реки создают уникальные природные пейзажи. Это место для тех, кто хочет погрузиться в атмосферу тишины и спокойствия, наслаждаясь красотой дикой природы.",
+          "en": "Naryn is surrounded by high mountain ranges of the Tian Shan, and its endless valleys and rivers create unique natural landscapes. This is the place for those who want to immerse themselves in the atmosphere of peace and quiet, enjoying the beauty of the wild nature.",
+          "kg": "Нарын Тянь-Шань тоолорунун бийик тоо чокулары менен курчалган, анын чексиз өрөөндөрү жана дарыялары уникалдуу табигый пейзаждарды түзөт. Бул тынчтык жана тынчтык атмосферасына кирүү, жапайы табияттын кооздугунан ырахат алуу үчүн келгендер үчүн идеалдуу жер."
+        },
+        "label": {
+          "ru": "Величие природы",
+          "en": "Majesty of Nature",
+          "kg": "Табияттын улуулугу"
+        }
+      },
+      {
+        "id": 1,
+        "img": "/img-tyndyk.webp",
+        "text": {
+          "ru": "Нарын — это центр кочевой культуры Кыргызстана. Здесь сохранились традиции, связанные с жизнью кочевников, включая уникальные ремесла, обычаи и традиции. Это место, где можно глубже понять историю и культуру народа.",
+          "en": "Naryn is the center of Kyrgyzstan's nomadic culture. Here, traditions related to the life of nomads have been preserved, including unique crafts, customs, and traditions. This is the place to gain a deeper understanding of the history and culture of the people.",
+          "kg": "Нарын Кыргызстандагы кочмондордун маданиятынын борбору. Мында кочмондордун жашоосу менен байланышкан салттар сакталган, анын ичинде уникалдуу кол өнөрчүлүк, салттар жана салттар. Бул жер элдин тарыхын жана маданиятын терең түшүнүүгө мүмкүнчүлүк берет."
+        },
+        "label": {
+          "ru": "Традиции",
+          "en": "Traditions",
+          "kg": "Салттар"
+        }
+      },
+      {
+        "id": 2,
+        "img": "/img-tea.webp",
+        "text": {
+          "ru": "Нарын известен своим гостеприимством и атмосферой уединения. Здесь вас встретят открытые и дружелюбные люди, а окружающая природа и тишина создадут идеальные условия для отдыха и восстановления в полном комфорте.",
+          "en": "Naryn is known for its hospitality and atmosphere of solitude. Here, you will be greeted by open and friendly people, and the surrounding nature and silence will create perfect conditions for rest and recovery in full comfort.",
+          "kg": "Нарын конокпоздору менен жана жалгыздык атмосферасы менен белгилүү. Бул жерде сизди ачык жана достук адамдар тосуп алат, ал эми тегеректеги табият жана тынчтык толук комфорт менен эс алуу жана калыбына келтирүү үчүн идеалдуу шарттарды түзөт."
+        },
+        "label": {
+          "ru": "Гостеприимство",
+          "en": "Hospitality",
+          "kg": "Конокчулук"
+        }
+      }
+    ]
+]
+  

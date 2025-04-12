@@ -1,50 +1,104 @@
 [
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "253",
-      "label": "Премиум с террасой King Премиум с террасой King Премиум с террасой King",
-      "price": 300,
-      "rooms": "1"
+  {
+    "img": "/img-hotel1.webp",
+    "people": 2,
+    "meters": "30",
+    "label": {
+      "ru": "Классик",
+      "en": "Classic",
+      "kg": "Классик"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "1",
-      "price": 3000,
-      "rooms": "1"
+    "text": {
+      "ru": "Уютный номер с базовыми удобствами. Идеален для короткого отдыха у озера. Вид на внутренний двор.",
+      "en": "Cozy room with basic amenities. Ideal for a short stay by the lake. View of the inner courtyard.",
+      "kg": "Жумшак номер, негизги ыңгайлуулуктар менен. Кыска мөөнөттүк эс алуу үчүн ылайыктуу. Ички аянтка көрүнүш."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "2",
-      "price": 300,
-      "rooms": "1"
+    "price": 100,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel2.webp",
+    "people": 2,
+    "meters": "38",
+    "label": {
+      "ru": "Стандарт",
+      "en": "Standard",
+      "kg": "Стандарт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "3",
-      "price": 300,
-      "rooms": "1"
+    "text": {
+      "ru": "Комфортный номер с балконом и частичным видом на Иссык-Куль. Queen-size кровать, кондиционер, рабочая зона.",
+      "en": "Comfortable room with a balcony and partial view of Issyk-Kul. Queen-size bed, air conditioner, work area.",
+      "kg": "Ыңгайлуу номер, балкону менен жана Иссык-Көлгө жарым-жартылай көрүнүшү менен. Queen-size керебет, кондиционер, иштөө аймагы."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "4",
-      "price": 300,
-      "rooms": "1"
+    "price": 160,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel3.webp",
+    "people": 2,
+    "meters": "50",
+    "label": {
+      "ru": "Комфорт",
+      "en": "Comfort",
+      "kg": "Комфорт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "5",
-      "price": 300,
-      "rooms": "1"
-    }
-  ]
+    "text": {
+      "ru": "Просторный номер с прямым видом на озеро, зоной отдыха и балконом. Отличный вариант для спокойного отдыха.",
+      "en": "Spacious room with a direct view of the lake, relaxation area, and balcony. A great option for a peaceful stay.",
+      "kg": "Ичи кең, көлгө түз көрүнүшү менен, эс алуу аймагы жана балкону бар. Тынч эс алуу үчүн эң жакшы вариант."
+    },
+    "price": 220,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel4.webp",
+    "people": 2,
+    "meters": "70",
+    "label": {
+      "ru": "Джуниор Сюит",
+      "en": "Junior Suite",
+      "kg": "Жюниор Сюит"
+    },
+    "text": {
+      "ru": "Номер повышенной комфортности с гостиной зоной, панорамными окнами и видом на Иссык-Куль и горы.",
+      "en": "Enhanced comfort room with a living area, panoramic windows, and a view of Issyk-Kul and the mountains.",
+      "kg": "Жогорку ыңгайлуулуктагы номер, конок бөлмөсү, панорамалык терезелер жана Иссык-Көлгө жана тоолорго көрүнүш."
+    },
+    "price": 300,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel5.webp",
+    "people": 2,
+    "meters": "100",
+    "label": {
+      "ru": "Сюит",
+      "en": "Suite",
+      "kg": "Сюит"
+    },
+    "text": {
+      "ru": "Шикарный номер с отдельной спальней, просторной гостиной, большой ванной и открытой террасой с видом на озеро.",
+      "en": "Luxurious room with a separate bedroom, spacious living room, large bathroom, and an open terrace with a lake view.",
+      "kg": "Жогорку деңгээлдеги люкс, өз алдынча уктоо бөлмөсү, кең конок бөлмөсү, чоң ванна жана көлгө көрүнүшү бар ачык терраса."
+    },
+    "price": 480,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel6.webp",
+    "people": 2,
+    "meters": "160",
+    "label": {
+      "ru": "Премиум с террасой King",
+      "en": "Premium with King Terrace",
+      "kg": "Премиум King террасасы менен"
+    },
+    "text": {
+      "ru": "Эксклюзивный люкс с видом на Иссык-Куль, дизайнерским интерьером, террасой на крыше и личным обслуживанием.",
+      "en": "Exclusive suite with a view of Issyk-Kul, designer interior, rooftop terrace, and personalized service.",
+      "kg": "Эксклюзивдүү люкс, Иссык-Көлгө көрүнүшү менен, дизайнердик интерьер, шатырдагы терраса жана өзгөчө кызмат."
+    },
+    "price": 720,
+    "rooms": "3"
+  }
+]

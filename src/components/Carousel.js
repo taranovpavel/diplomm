@@ -1,11 +1,16 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import { Navigation } from "swiper/modules";
-import classes from "./Carousel.module.sass"
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Carousel = ({photos}) => {
+import classes from "./Carousel.module.sass"
+import dataBooking from '../data/book.json'
+
+const Carousel = ({data,link}) => {
+  const {lang} = useSelector(state => state.HeaderReducer)
   return (
     <Swiper
       modules={[Navigation]}
@@ -15,21 +20,21 @@ const Carousel = ({photos}) => {
       slidesPerView={1}
       className={classes.Carousel}
     >
-      {photos.map((item) => (
-        <SwiperSlide key={item.id}>
+      {data.map((item,idx) => (
+        <SwiperSlide key={idx}>
           <div className={classes.Carousel__card} style={{backgroundImage: `url(${item.img})`}}>
               <div className={classes.Carousel__card__info}>
                   <div className={classes.Carousel__card__info__inner}>
-                        <p className={classes.Carousel__card__info__inner__title}>{item.title}</p>
-                        <p className={classes.Carousel__card__info__inner__text}>{item.text}</p>
-                        <button className={classes.Carousel__card__info__inner__book}>забронировать</button>
+                        <p className={classes.Carousel__card__info__inner__title}>{item.label[lang]}</p>
+                        <p className={classes.Carousel__card__info__inner__text}>{item.text[lang]}</p>
+                        <Link to={link} className={classes.Carousel__card__info__inner__book}><p>{dataBooking.bookNow[lang]}</p></Link>
                   </div>
-                  <div className={classes.Carousel__card__info__btn}>
-                      <p>Все номера</p>
+                  <Link to={"/book"}  className={classes.Carousel__card__info__btn}>
+                      <p>{dataBooking.roomsLabel[lang]}</p>
                       <div className={classes.Carousel__card__info__btn__br}/>
-                  </div>
+                  </Link>
                   <div className={classes.Carousel__card__info__id}>
-                      <p>{item.id+1} / {photos.length}</p>
+                      <p>{idx+1} / {data.length}</p>
                   </div>
               </div>
           </div>

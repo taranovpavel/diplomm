@@ -1,0 +1,25 @@
+{
+    "label": {
+      "ru": "меню",
+      "en": "мenu",
+      "kg": "меню"
+    },
+    "btn": {
+      "ru": "забронировать",
+      "en": "book now",
+      "kg": "брондоо"
+    },
+    "routes": [
+        { "path": "/", "label": { "ru": "Главная", "en": "Home", "kg": "Башкы бет" } },
+        { "path": "/book", "label": { "ru": "Наши отели", "en": "Our Hotels", "kg": "Биздин мейманканалар" } }, 
+        { "path": "/bishkek", "label": { "ru": "Бишкек", "en": "Bishkek", "kg": "Бишкек" } },
+        { "path": "/issyk-kul", "label": { "ru": "Исык-Куль", "en": "Issyk-Kul", "kg": "Ысык-Көл" } },
+        { "path": "/naryn", "label": { "ru": "Нарын", "en": "Naryn", "kg": "Нарын" } },
+        { "path": "/about", "label": { "ru": "О нас", "en": "About Us", "kg": "Биз жөнүндө" } }
+    ],      
+    "name": {
+        "ru": "© 2025. Отель JILDIZ IMPERIAL HOTELS, г. Бишкек Официальный сайт",
+        "en": "© 2025. Hotel JILDIZ IMPERIAL HOTELS, Bishkek. Official website",
+        "kg": "© 2025. JILDIZ IMPERIAL HOTELS мейманканасы, Бишкек. Расмий сайт"
+    }
+}

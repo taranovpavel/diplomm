@@ -1,51 +1,104 @@
 [
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "153",
-      "label": "Премиум с террасой King Премиум с террасой King Премиум с террасой King",
-      "price": 300,
-      "rooms": "1"
+  {
+    "img": "/img-hotel1.webp",
+    "people": 2,
+    "meters": "28",
+    "label": {
+      "ru": "Классик",
+      "en": "Classic",
+      "kg": "Классик"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "1",
-      "price": 3000,
-      "rooms": "1"
+    "text": {
+      "ru": "Уютный номер для двоих, идеален для короткой остановки. Минималистичный дизайн, рабочее место, ванная с душем.",
+      "en": "A cozy room for two, ideal for a short stay. Minimalist design, work area, bathroom with shower.",
+      "kg": "Эки адамга ылайыктуу, кыска мөөнөттүк токтоп турууга ыңгайлуу. Минималисттик дизайн, иштөө чөйрөсү, жуунуучу бөлмө менен."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "2",
-      "price": 300,
-      "rooms": "1"
+    "price": 80,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel2.webp",
+    "people": 2,
+    "meters": "35",
+    "label": {
+      "ru": "Стандарт",
+      "en": "Standard",
+      "kg": "Стандарт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "3",
-      "price": 300,
-      "rooms": "1"
+    "text": {
+      "ru": "Современный интерьер, удобная кровать Queen-size, рабочая зона, ванная комната с душем.",
+      "en": "Modern interior, comfortable Queen-size bed, work area, bathroom with shower.",
+      "kg": "Заманавай интерьер, ыңгайлуу Queen-size керебет, иштөө аймагы, жуунуучу бөлмө менен."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "4",
-      "price": 300,
-      "rooms": "1"
+    "price": 120,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel3.webp",
+    "people": 2,
+    "meters": "45",
+    "label": {
+      "ru": "Комфорт",
+      "en": "Comfort",
+      "kg": "Комфорт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "5",
-      "price": 300,
-      "rooms": "1"
-    }
-  ]
-  
+    "text": {
+      "ru": "Просторный номер с мягкой зоной отдыха и балконом. Стильный интерьер и увеличенное пространство.",
+      "en": "Spacious room with a soft relaxation area and balcony. Stylish interior and increased space.",
+      "kg": "Ичи кең, жумшак эс алуу аймагы жана балкону менен. Стильдүү интерьер жана кеңейтилген аянт."
+    },
+    "price": 180,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel4.webp",
+    "people": 2,
+    "meters": "60",
+    "label": {
+      "ru": "Джуниор Сюит",
+      "en": "Junior Suite",
+      "kg": "Жюниор Сюит"
+    },
+    "text": {
+      "ru": "Зона отдыха с диваном, спальная зона с King-size кроватью, панорамные окна и вид на город.",
+      "en": "Relaxation area with a sofa, sleeping area with a King-size bed, panoramic windows and a city view.",
+      "kg": "Диван менен эс алуу аймагы, King-size керебет менен уктоо аймагы, панорамдык терезелер жана шаарга болгон көрүнүш."
+    },
+    "price": 250,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel5.webp",
+    "people": 2,
+    "meters": "90",
+    "label": {
+      "ru": "Сюит",
+      "en": "Suite",
+      "kg": "Сюит"
+    },
+    "text": {
+      "ru": "Отдельная гостиная, спальня, большая ванная с джакузи, кофемашина, индивидуальный дизайн.",
+      "en": "Separate living room, bedroom, large bathroom with jacuzzi, coffee machine, unique design.",
+      "kg": "Ажыраган конок бөлмө, уктоо бөлмөсү, чоң ванна жана джакузи, кофемашина, өзгөчө дизайн."
+    },
+    "price": 400,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel6.webp",
+    "people": 2,
+    "meters": "113",
+    "label": {
+      "ru": "Премиум с террасой King",
+      "en": "Premium with King Terrace",
+      "kg": "Премиум King террасасы менен"
+    },
+    "text": {
+      "ru": "Люкс с открытой террасой, панорамным видом на город и горы, просторная гостиная, спальня, дизайнерская мебель.",
+      "en": "Luxury with an open terrace, panoramic view of the city and mountains, spacious living room, bedroom, designer furniture.",
+      "kg": "Ачык террасасы менен люкс, шаар жана тоолорго панорамалык көрүнүш, кең конок бөлмөсү, уктоо бөлмөсү, дизайнерлик мебель."
+    },
+    "price": 600,
+    "rooms": "3"
+  }
+]

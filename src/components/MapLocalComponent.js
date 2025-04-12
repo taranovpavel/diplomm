@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
 const MapLocalComponent = ({markers,zoom}) => {
-  console.log(markers.length);
   let x = 0
   let y = 0
   markers.map((item)=>{

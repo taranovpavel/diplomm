@@ -1,26 +1,36 @@
 import React from 'react';
 import { useState } from "react";
-import Box from '@mui/material/Box';
+import { useDispatch, useSelector } from 'react-redux';
+
+import {getPost,setIsModal} from "../redux/HeaderSlice";
+
+import classes from './Biil.module.sass'
+import countriesRu from '../data/countryRu.json';
+import countriesEn from '../data/countryEn.json';
+
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import FormControl from "@mui/material/FormControl";
-import { green } from "@mui/material/colors";
-import { styled } from "@mui/material/styles";
-import classes from './Biil.module.sass'
-import countries from '../data/countryRu.json';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { FormHelperText } from '@mui/material';
+import { FormHelperText} from '@mui/material';
+
 import { ReactComponent as Visa} from "../images/icon-visa.svg"
 import { ReactComponent as Mir} from "../images/icon-mir.svg"
 import { ReactComponent as Mastercard} from "../images/icon-mastercard.svg"
 
-const Bill = ({book,days,currency,}) => {
+import dataBooking from '../data/book.json'
+
+const Bill = ({book,days,currency}) => {
+    const {lang} = useSelector(state => state.HeaderReducer)
+    const dispatch = useDispatch()
     const [value, setValue] = useState({surname:"", name:"", number:"", email:"", citizenship: "", checkbox: false});
     const [isError, setIsError] = useState({surname:true, name:true, number:true, email:true, citizenship:true, checkbox: true});
     const regex = {surname: /^[A-Za-zА-Яа-яЁё]{3,}$/, name:/^[A-Za-zА-Яа-яЁё]{2,}$/, number:/^\+(\d{3})\s?(\(?\d{3}\)?)([-\s]?\d{2}){3}$/, email:/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
     const formatStay =(n)=> {
-        const nights = n % 10 === 1 && n % 100 !== 11 ? "ночь" : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? "ночи" : "ночей"; 
+        let nights
+        if(lang==="ru"){nights = n % 10 === 1 && n % 100 !== 11 ? "ночь" : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? "ночи" : "ночей"}
+        else if (lang==="en"){nights=n>1?"nights":"night"}
+        else{nights="түн"}
         return `${n} ${nights}`
     }
     const handleChange = (event,auto) => {
@@ -33,56 +43,93 @@ const Bill = ({book,days,currency,}) => {
             setValue((prevState) => ({...prevState, citizenship: auto,}))
             setIsError((prevState) => ({...prevState, citizenship: auto===null}))
         }
-      };
-      const formatNum =(number)=> {return number.toLocaleString('ru-RU')}
+    }
+    const formatNum =(number)=> {return number.toLocaleString('ru-RU')}
     const dataField = [
         {
-            label:"Фамилия",
+            label: {
+                ru: "Фамилия",
+                en: "Surname",
+                kg: "Фамилия"
+            },
             value: value.surname,
             onChange: handleChange,
             error: isError.surname,
-            helpText: "Минимум 3 символа",
+            helpText: {
+                ru: "Минимум 3 символа",
+                en: "Minimum 3 characters",
+                kg: "Кеминде 3 тамга"
+            },
             id: "surname"
         },
         {
-            label:"Имя",
+            label: {
+                ru: "Имя",
+                en: "First name",
+                kg: "Аты"
+            },
             value: value.name,
             onChange: handleChange,
             error: isError.name,
-            helpText: "Минимум 2 символа",
+            helpText: {
+                ru: "Минимум 2 символа",
+                en: "Minimum 2 characters",
+                kg: "Кеминде 2 тамга"
+            },
             id: "name"
         },
         {
-            label:"Номер",
+            label: {
+                ru: "Номер",
+                en: "Phone number",
+                kg: "Телефон номери"
+            },
             value: value.number,
             onChange: handleChange,
             error: isError.number,
-            helpText: "Введите номер корректно",
+            helpText: {
+                ru: "Введите номер корректно",
+                en: "Enter a valid number",
+                kg: "Туура номер киргизиңиз"
+            },
             id: "number"
         },
         {
-            label:"Почта",
+            label: {
+                ru: "Почта",
+                en: "Email",
+                kg: "Почта"
+            },
             value: value.email,
             onChange: handleChange,
             error: isError.email,
-            helpText: "Введите почту корректно",
+            helpText: {
+                ru: "Введите почту корректно",
+                en: "Enter a valid email",
+                kg: "Туура почта киргизиңиз"
+            },
             id: "email"
         }
     ]
-    
-    console.log(value);
-    console.log(isError);
+    const post = () =>{
+        let errors = 0
+        for(const key in isError){if (isError[key]){errors+=1}}
+        if(errors===0){
+            dispatch(getPost(`ФИО:  ${value.name} ${value.surname}%0AНомер:  ${value.number}%0AПочта:  ${value.email}%0AГражданство:  ${value.citizenship}%0A%0AНомер:  ${book.label.en} %0AБронь с ${book.numFrom} ${book.monthFrom} до ${book.numTo} ${book.monthTo}%0AЦена завтрака ${book.breakfastPrice}%0AИтого: ${book.price} $`))
+            dispatch(setIsModal())
+        }
+    }
+
     return (
         <div className={classes.Main}>
             <div className={classes.Main__inner}>
-                <p className={classes.Main__inner__label}>Введите свои данные</p>
                 <div className={classes.Main__inner__top}>
                     {dataField.map((item,idx)=>(
                         <TextField
                             className={classes.Main__inner__top__input}
                             key={idx}
                             id={item.id}
-                            label={item.label}
+                            label={item.label[lang]}
                             variant="filled"
                             value={item.value}
                             onChange={item.onChange}
@@ -90,7 +137,7 @@ const Bill = ({book,days,currency,}) => {
                             color={!item.error?"success":"error"}
                             focused
                             sx={{ width: 460 }}
-                            helperText={item.error? item.helpText : ""}
+                            helperText={item.error? item.helpText[lang] : ""}
                         /> 
                     ))}
                     <Autocomplete
@@ -100,7 +147,7 @@ const Bill = ({book,days,currency,}) => {
                         value={value.citizenship}
                         onChange={handleChange}
                         color={"success"}
-                        options={countries}
+                        options={lang==="en"?countriesEn:countriesRu}
                         sx={{ width: 460 }}
                         renderInput={(params) => 
                             <TextField 
@@ -108,14 +155,14 @@ const Bill = ({book,days,currency,}) => {
                                 focused 
                                 color={!isError.citizenship?"success":"error"} 
                                 variant="filled" 
-                                helperText={isError.citizenship?"Заполните поле":""} 
+                                helperText={isError.citizenship?dataBooking.fillField[lang]:""} 
                                 error={isError.citizenship} 
-                                label="Гражданство" 
+                                label={dataBooking.citizenship[lang]} 
                             />
                         }
                       />
                 </div>
-                <p className={classes.Main__inner__label}>Выберите способ опалты</p>
+                <p className={classes.Main__inner__label}>{dataBooking.choosePayment[lang]}</p>
                 <div className={classes.Main__inner__bottom}>
                     <div className={classes.Main__inner__bottom__check}>
                         <FormControlLabel  
@@ -125,20 +172,20 @@ const Bill = ({book,days,currency,}) => {
                             checked={value.checkbox}  
                             onChange={(e)=>{setValue((prevState) => ({...prevState, checkbox: e.target.checked,}));setIsError((prevState) => ({...prevState, checkbox: !e.target.checked}))}}
                             sx={{color: '#D32F2F','&.Mui-checked': {color: '#2E7D32',}}} defaultChecked/>} 
-                            label="Я согласен с правилами онлайн-бронирования, обработкой персональных данных и политикой конфиденциальности"
+                            label={dataBooking.agreementText[lang]}
                             color={!isError.citizenship?"success":"error"} 
                         />
-                        {isError.checkbox?<FormHelperText className={classes.Main__inner__bottom__check__text}>Вы должны согласиться</FormHelperText>:""}
+                        {isError.checkbox?<FormHelperText className={classes.Main__inner__bottom__check__text}>{dataBooking.mustAgree[lang]}</FormHelperText>:""}
                     </div>
                     
                     
                     <div className={classes.Main__inner__bottom__pay}>
                         <div className={classes.Main__inner__bottom__pay__header}>
                             <div className={classes.Main__inner__bottom__pay__header__left}>
-                                <p>Самый удобный способ</p>
+                                <p>{dataBooking.mostConvenient[lang]}</p>
                             </div>
                             <div className={classes.Main__inner__bottom__pay__header__center}>
-                                <p className={classes.Main__inner__bottom__pay__header__center__label}>Банковская карта</p>
+                                <p className={classes.Main__inner__bottom__pay__header__center__label}>{dataBooking.bankCard[lang]}</p>
                                 <p className={classes.Main__inner__bottom__pay__header__center__cards}>Visa, МИР, MasterCard</p>
                             </div>
                             <div className={classes.Main__inner__bottom__pay__header__right}>
@@ -148,21 +195,27 @@ const Bill = ({book,days,currency,}) => {
                             </div>
                         </div>
                         <div className={classes.Main__inner__bottom__pay__info}>
-                            <p>Оплачивается вся сумма брони.</p>
-                            <p>При бронировании номера необходимо внести полную невозмещаемую предоплату за проживание плюс налог (при неявке, отмене или изменении бронирования возврат средств не производится). </p>
-                            <p>Кассовый чек и все подтверждающие документы о проживании и оказанных услугах за весь период мы отправим вам на электронную почту, указанную при бронировании.</p>
+                            {dataBooking.paymentPolicy[lang].map((item,idx)=>(
+                                <p key={idx}>{item}</p>
+                            ))}
                         </div>    
                         <div className={classes.Main__inner__bottom__pay__price}>
                             <div className={classes.Main__inner__bottom__pay__price__cost}>
-                                <p>предоплата: {formatNum(currency==="$"?book.price*days:book.price*days*80)} {currency}</p>
-                                {/* <p>{formatNum(currency==="$"?book.price*days:book.price*days*80)} {currency}</p> */}
+                                {lang==="kg"?
+                                    <>
+                                        <p>{dataBooking.prepayment[lang]}</p>
+                                        <p>{formatNum(currency==="$"?book.price*days:book.price*days*80)} {currency}</p>
+                                    </>
+                                :
+                                    <p>{dataBooking.prepayment[lang]} {formatNum(currency==="$"?book.price*days:book.price*days*80)} {currency}</p>
+                                }
                             </div>
-                            <button>забронировать</button>
+                            <button onClick={(()=>{post()})}>{dataBooking.bookNow[lang]}</button>
                         </div>
                     </div>    
                 </div>
                 <div className={classes.Main__inner__bill}>
-                    <p className={classes.Main__inner__bill__label}>Ваша бронь</p>
+                    <p className={classes.Main__inner__bill__label}>{dataBooking.yourBooking[lang]}</p>
                     <div className={classes.Main__inner__bill__days}><p>{formatStay(days)}</p></div>
                     <div className={classes.Main__inner__bill__date}>
                         <div className={classes.Main__inner__bill__date__inner}>
@@ -174,7 +227,7 @@ const Bill = ({book,days,currency,}) => {
                                 <div className={classes.Main__inner__bill__date__inner__top__line}/>
                             </div>
                             <p>{book.dayFrom}</p>
-                            <p>c 15:00</p>
+                            <p>{dataBooking.from[lang]} 15:00</p>
                         </div>
                         <div className={classes.Main__inner__bill__date__inner}>
                             <div className={classes.Main__inner__bill__date__inner__top}>
@@ -184,20 +237,20 @@ const Bill = ({book,days,currency,}) => {
                                 </div>
                             </div>
                             <p>{book.dayTo}</p>
-                            <p>до 15:00</p>
+                            <p>{dataBooking.upTo[lang]} 15:00</p>
                         </div>
                     </div>
                     <div/>
-                    <p>Номер: {book.label}</p>
+                    <p>{dataBooking.room[lang]}: {book.label[lang]}</p>
                     {book.breakfastPrice>0?
                         <>
-                            <p>Номер: {formatNum(currency==="$"?book.price*days:book.price*days*80)}  {currency}</p>
-                            <p>Завтрак: {formatNum(currency==="$"?book.breakfastPrice*days:book.breakfastPrice*days*80)}  {currency}</p>
+                            <p>{dataBooking.room[lang]}: {formatNum(currency==="$"?book.price*days:book.price*days*80)}  {currency}</p>
+                            <p>{dataBooking.breakfast[lang]}: {formatNum(currency==="$"?book.breakfastPrice*days:book.breakfastPrice*days*80)}  {currency}</p>
                         </> 
                         :
                         ""                       
                     }
-                    <p>Итого: {formatNum(currency==="$"?(book.price+book.breakfastPrice)*days:(book.price+book.breakfastPrice)*days*80)} {currency}</p>
+                    <p>{dataBooking.total[lang]}: {formatNum(currency==="$"?(book.price+book.breakfastPrice)*days:(book.price+book.breakfastPrice)*days*80)} {currency}</p>
                 </div>
             </div>
         </div>

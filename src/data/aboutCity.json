@@ -1,0 +1,63 @@
+[
+    {
+      "img1": "/img-2.webp",
+      "img2": "/img-yrta.webp",
+      "label": {
+        "ru": "Влюбляясь в Кыргызстан",
+        "en": "Falling in Love with Kyrgyzstan",
+        "kg": "Кыргызстанга ашык болуу"
+      },
+      "text": {
+        "ru": "Бишкек и Чуйская область — это сердце Кыргызстана, где величественные горные пейзажи гармонично сочетаются с богатым культурным наследием. Здесь, среди бескрайних долин и живописных ущелий, ощущается уникальное сочетание традиций кочевников и динамичного ритма современного города.",
+        "en": "Bishkek and the Chuy Region are the heart of Kyrgyzstan, where majestic mountain landscapes blend seamlessly with rich cultural heritage. Among endless valleys and scenic gorges, the unique harmony of nomadic traditions and the modern city's rhythm comes to life.",
+        "kg": "Бишкек жана Чүй облусу — Кыргызстандын жүрөгү. Бул жерде зор тоолор маданий мурас менен айкалышып, чексиз өрөөндөр менен кооз капчыгайлар көчмөн салттар менен азыркы жашоонун ыргагын бириктирет."
+      },
+      "btn": {
+        "ru": "забронировать номер",
+        "en": "book a room",
+        "kg": "бөлмө буйрутма берүү"
+      },
+      "link": "/book/bishkek"
+    },
+    {
+      "img1": "/img-kul1.webp",
+      "img2": "/img-kul2.webp",
+      "label": {
+        "ru": "Оазис в сердце Кыргызстана",
+        "en": "Oasis in the Heart of Kyrgyzstan",
+        "kg": "Кыргызстандын жүрөгүндөгү оазис"
+      },
+      "text": {
+        "ru": "Иссык-Куль — это не просто озеро. Это настоящий оазис, окруженный величественными горными пейзажами, где каждый уголок природы наполнен гармонией. Вдохновляйтесь красотой чистейших вод и свежим воздухом, наслаждайтесь уединением и покоем в самом сердце Кыргызстана. Здесь каждый момент — это шанс забыться и почувствовать связь с природой.",
+        "en": "Issyk-Kul is more than just a lake. It's a true oasis surrounded by majestic mountains, where every corner of nature breathes harmony. Be inspired by crystal-clear waters and fresh air, enjoying solitude and peace in the very heart of Kyrgyzstan. Every moment here is a chance to disconnect and feel nature's embrace.",
+        "kg": "Ысык-Көл — жөн гана көл эмес. Бул тоолордун курчоосунда жайгашкан чыныгы оазис. Ар бир бурчунда жаратылыштын тынчтыгы жана гармониясы жашайт. Таза аба менен тунук сууга суктанып, тынчтыкта эс алыңыз. Бул жер — табият менен биримдикти сезүүгө эң сонун мүмкүнчүлүк."
+      },
+      "btn": {
+        "ru": "забронировать номер",
+        "en": "book a room",
+        "kg": "бөлмө буйрутма берүү"
+      },
+      "link": "/book/issyk-kul"
+    },
+    {
+      "img2": "/img-nature.webp",
+      "img1": "/img-castle.webp",
+      "label": {
+        "ru": "Гармония природы и культуры",
+        "en": "Harmony of Nature and Culture",
+        "kg": "Табият менен маданияттын айкалышы"
+      },
+      "text": {
+        "ru": "Нарын — это место, где природа и культура сливаются в единую гармонию. Величественные горы, бескрайние долины и чистые реки создают удивительную атмосферу спокойствия и вдохновения. Здесь, среди дикой природы, вы найдете традиции, которые передаются из поколения в поколение, а культурное наследие оживает в каждом уголке.",
+        "en": "Naryn is a place where nature and culture merge in perfect harmony. Majestic mountains, endless valleys, and clear rivers create a serene and inspiring atmosphere. Here, amid unspoiled wilderness, traditions are preserved and passed down through generations, and cultural heritage lives on in every corner.",
+        "kg": "Нарын — бул табият менен маданият айкалышкан жер. Бул жерде зор тоолор, кең өрөөндөр жана тунук дарыялар тынчтык жана шыктандыруу менен коштолот. Жапайы жаратылыштын ичинде муундан муунга өтүп келген салттар жашап, маданий мурас ар бир бурчта көрүнүп турат."
+      },
+      "btn": {
+        "ru": "забронировать номер",
+        "en": "book a room",
+        "kg": "бөлмө буйрутма берүү"
+      },
+      "link": "/book/naryn"
+    }
+  ]
+  

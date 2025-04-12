@@ -1,0 +1,94 @@
+{
+    "label": {
+        "ru": "Где роскошь встречается с уютом",
+        "en": "Where Luxury Meets Comfort",
+        "kg": "Кымбаттуулук уют менен бириккен жер"
+      },
+    "cards":[ 
+        {
+          "id": 0,
+          "img": "/img-mountains.webp",
+          "text": {
+            "ru": "Погрузитесь в атмосферу спокойствия и вдохновения, наслаждаясь видом на величественные горы прямо из вашего окна.",
+            "en": "Immerse yourself in an atmosphere of tranquility and inspiration, enjoying the view of majestic mountains right from your window.",
+            "kg": "Терезеңизден көрүнгөн зоор тоолорду көрүп, тынчтык менен шыктанууну сезиңиз."
+          },
+          "label": {
+            "ru": "Вид на горы",
+            "en": "Mountain View",
+            "kg": "Тоо көрүнүшү"
+          }
+        },
+        {
+          "id": 1,
+          "img": "/img-pool.webp",
+          "text": {
+            "ru": "Расслабьтесь у бассейна с видом на сад и окружающие просторы, создавая идеальные условия для отдыха.",
+            "en": "Relax by the pool with a view of the garden and open spaces, creating the perfect setting for rest.",
+            "kg": "Бакчага жана ачык мейкиндиктерге караган бассейнде эс алыңыз."
+          },
+          "label": {
+            "ru": "Бассейн на террасе",
+            "en": "Pool Terrace",
+            "kg": "Бассейн террасасы"
+          }
+        },
+        {
+          "id": 2,
+          "img": "/img-spa.webp",
+          "text": {
+            "ru": "Подарите себе незабываемые моменты в спа-зоне с массажами и расслабляющими процедурами, которые помогут восстановить силы.",
+            "en": "Treat yourself to unforgettable moments in the spa with massages and relaxing treatments to recharge your energy.",
+            "kg": "Массаж жана эс алуучу процедуралар менен спа-зонада унутулгус мүнөттөрдү өткөрүңүз."
+          },
+          "label": {
+            "ru": "Спа-зона",
+            "en": "Spa Zone",
+            "kg": "Спа аймагы"
+          }
+        },
+        {
+          "id": 3,
+          "img": "/img-rest.webp",
+          "text": {
+            "ru": "Идеальное место для романтического ужина или деловой встречи, где можно насладиться не только кухней, но и потрясающим видом.",
+            "en": "The perfect place for a romantic dinner or business meeting, where you can enjoy not only the cuisine but also a stunning view.",
+            "kg": "Романтикалык кечки тамак же ишкер жолугушуу үчүн эң сонун жер — даамдуу тамак-аш жана кооз көрүнүштөр менен."
+          },
+          "label": {
+            "ru": "Панорамный ужин",
+            "en": "Panoramic Dining",
+            "kg": "Панорамалык кечки тамак"
+          }
+        },
+        {
+          "id": 4,
+          "img": "/img-hall.webp",
+          "text": {
+            "ru": "Уютная лаунж-зона с мягкими креслами и стильным интерьером — идеальное место для отдыха после долгого дня.",
+            "en": "A cozy lounge with soft chairs and stylish interior — the perfect place to unwind after a long day.",
+            "kg": "Жумшак отургучтар жана стильдүү жасалгасы бар лаунж — узак күндөн кийин эс алуу үчүн мыкты жер."
+          },
+          "label": {
+            "ru": "Лаунж-зона",
+            "en": "Lounge Area",
+            "kg": "Лаунж аймагы"
+          }
+        },
+        {
+          "id": 5,
+          "img": "/img-sport.webp",
+          "text": {
+            "ru": "Полноценный тренажерный зал для поддержания формы, с современным оборудованием и просторной зоной для тренировок.",
+            "en": "A fully equipped gym to keep you in shape, featuring modern equipment and spacious workout areas.",
+            "kg": "Замандын талабына жооп берген, спорт менен машыгууга ыңгайлуу кеңири зал."
+          },
+          "label": {
+            "ru": "Спортивный зал",
+            "en": "Fitness Center",
+            "kg": "Спорт залы"
+          }
+        }
+    ]
+}
+  

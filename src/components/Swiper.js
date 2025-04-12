@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css"
 import "swiper/css/pagination"
@@ -18,7 +19,6 @@ const SwiperComponent = ({photos,swiperClasses = "swiper", imageClasses = "image
             }}
             modules={autoplay?[ Pagination, Scrollbar, Autoplay ]:[Pagination, Scrollbar]}
             slidesPerView={1}
-            // pagination={{ clickable: true }}
             className={swiperClasses}
         >
             {photos.map((item,idx)=> <SwiperSlide className={imageClasses} key={idx} style={{backgroundImage: `url(${item})`}} />)}

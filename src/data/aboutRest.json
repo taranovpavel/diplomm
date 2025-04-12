@@ -1,0 +1,51 @@
+{
+    "label": {
+        "ru": "Рестораны и бары",
+        "en": "Restaurants and Bars",
+        "kg": "Ресторандар жана барлар"
+    },
+    "cards":[
+        {
+          "id": 0,
+          "img": "/img-rest1.webp",
+          "text": {
+            "ru": "Наслаждайтесь атмосферой уюта и гастрономическими шедеврами в одном из лучших мест города.",
+            "en": "Enjoy a cozy atmosphere and culinary masterpieces at one of the city's finest venues.",
+            "kg": "Шаардын эң мыкты жайларынын биринде жайлуулук жана даамдуу ашканадан ырахат алыңыз."
+          },
+          "label": {
+            "ru": "Вечерний Блик",
+            "en": "Evening Glow",
+            "kg": "Кечки Жарык"
+          }
+        },
+        {
+          "id": 1,
+          "img": "/img-rest2.webp",
+          "text": {
+            "ru": "Отдохните в спокойной и стильной обстановке, наслаждаясь высококачественной кухней и обслуживанием.",
+            "en": "Relax in a calm and stylish setting while enjoying high-quality cuisine and service.",
+            "kg": "Жогорку сапаттагы тамактар жана тейлөө менен тынч, стильдүү атмосферада эс алыңыз."
+          },
+          "label": {
+            "ru": "Белый Лотос",
+            "en": "White Lotus",
+            "kg": "Ак Лотос"
+          }
+        },
+        {
+          "id": 2,
+          "img": "/img-rest3.webp",
+          "text": {
+            "ru": "Попробуйте лучшие блюда местной и международной кухни в месте с прекрасным видом и атмосферой уюта.",
+            "en": "Try the best of local and international cuisine in a place with a great view and cozy ambiance.",
+            "kg": "Сонун көрүнүшү жана жайлуу атмосферасы менен жергиликтүү жана эл аралык ашкананын мыкты тамактарынан даам татыңыз."
+          },
+          "label": {
+            "ru": "Элегант",
+            "en": "Elegant",
+            "kg": "Элегант"
+          }
+        }
+    ]
+}

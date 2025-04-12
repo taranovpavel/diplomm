@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
+import dataBooking from '../data/book.json'
 import classes from './HotelsCards.module.sass'
 import Container from './Container';
 
 const HotelsCards = ({data,currency,daysDifference,setPage,setRoom}) => {
+  const {lang} = useSelector(state => state.HeaderReducer)
   const formatNum =(number)=> {
     return number.toLocaleString('ru-RU')
   }
@@ -18,15 +22,15 @@ const HotelsCards = ({data,currency,daysDifference,setPage,setRoom}) => {
                                 <div className={classes.Carousel__card__imgContainer__img} style={{backgroundImage: `url(${item.img})`}}/>
                               </div>
                               <div className={classes.Carousel__card__info}>
-                                <p className={classes.Carousel__card__info__label}>{item.label}</p>
+                                <p className={classes.Carousel__card__info__label}>{item.label[lang]}</p>
                                 <div className={classes.Carousel__card__info__top}>
-                                  <p className={classes.Carousel__card__info__top__text}>до {item.people} мест</p>
+                                  <p className={classes.Carousel__card__info__top__text}>{dataBooking.upTo[lang]} {item.people} {dataBooking.places[lang]}</p>
                                   <p className={classes.Carousel__card__info__top__text}>{item.meters} м²</p>
-                                  <p className={classes.Carousel__card__info__top__text}>{item.rooms} комн.</p>
+                                  <p className={classes.Carousel__card__info__top__text}>{item.rooms} {dataBooking.roomShort[lang]}</p>
                                 </div>
                                 <div className={classes.Carousel__card__info__bottom}>
                                   <p      className={classes.Carousel__card__info__bottom__price}>{formatNum(currency==="$"?item.price*days:item.price*80*days)} {currency}</p>  
-                                  <button className={classes.Carousel__card__info__bottom__btn}>выбрать</button>
+                                  <button className={classes.Carousel__card__info__bottom__btn}>{dataBooking.choose[lang]}</button>
                                 </div>                       
                               </div>
                             </div>
@@ -34,8 +38,7 @@ const HotelsCards = ({data,currency,daysDifference,setPage,setRoom}) => {
                     }
                 </div>
             }/> 
-        </div>
-        
+        </div> 
     );
 };
 

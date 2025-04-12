@@ -1,0 +1,186 @@
+{
+      "checkIn": {
+        "ru": "Дата заезда",
+        "en": "Check-in date",
+        "kg": "Келүү күнү"
+      },
+      "checkOut": {
+        "ru": "Дата отъезда",
+        "en": "Check-out date",
+        "kg": "Кетүү күнү"
+      },
+      "steps": {
+        "ru": ["Выберите номер", "Закажите услуги", "Введите свои данные"],
+        "en": ["Choose a room", "Order services", "Enter your details"],
+        "kg": ["Бөлмө тандаңыз", "Кызматтарды тандаңыз", "Маалымат киргизиңиз"]
+      },
+      "monthNames": {
+        "ru": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+        "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        "kg": ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]
+      },
+      "roomShort": {
+        "ru": "комн.",
+        "en": "rm.",
+        "kg": "бөлм."
+      },
+      "upTo": {
+        "ru": "до",
+        "en": "up to",
+        "kg": "чейин"
+      },
+      "roomAmenities": {
+        "ru": "В каждом номере: Smart TV, Wi-Fi, кондиционер, мини-холодильник, сейф, кофемашина, ванна и душ, King-size кровать, мебель, мини-бар, СПА и многое другое",
+        "en": "Each room includes: Smart TV, Wi-Fi, air conditioning, mini fridge, safe, coffee machine, bath and shower, King-size bed, furniture, mini-bar, spa, and more",
+        "kg": "Ар бир бөлмөдө: Smart TV, Wi-Fi, кондиционер, мини муздаткыч, сейф, кофемашина, ванна жана душ, King-size керебет, эмерек, мини-бар, СПА жана башкалар"
+      },
+      "comfortUpgrade": {
+        "ru": "Повысить комфорт",
+        "en": "Upgrade comfort",
+        "kg": "Комфортту жогорулатуу"
+      },
+      "breakfastOne": {
+        "ru": "Завтрак на одну персону",
+        "en": "Breakfast for one",
+        "kg": "Бир адамга арналган эртең мененки тамак"
+      },
+      "breakfastDesc": {
+        "ru": "Завтрак в элегантном ресторане \"Гранд Лаунж\" – утончённое начало дня в изысканной атмосфере.",
+        "en": "Breakfast in the elegant Grand Lounge restaurant – a refined start to your day in a sophisticated atmosphere.",
+        "kg": "\"Гранд Лаунж\" ресторанында эртең мененки тамак — кооз жана ыңгайлуу атмосферада күнүңүздү баштаңыз."
+      },
+      "yourBooking": {
+        "ru": "Ваша бронь",
+        "en": "Your Booking",
+        "kg": "Сиздин бронь"
+      },
+      "toRooms": {
+        "ru": "к номерам",
+        "en": "to rooms",
+        "kg": "бөлмөлөргө"
+      },
+      "toServices": {
+        "ru": "к услугам",
+        "en": "to services",
+        "kg": "кызматтарга"
+      },
+      "room": {
+        "ru": "Номер",
+        "en": "Room",
+        "kg": "Бөлмө"
+      },
+      "total": {
+        "ru": "итого",
+        "en": "total",
+        "kg": "жалпы"
+      },
+      "continue": {
+        "ru": "продолжить",
+        "en": "continue",
+        "kg": "улантуу"
+      },
+      "for": {
+        "ru": "за",
+        "en": "for",
+        "kg": "үчүн"
+      },
+      "yourRoomUpdated": {
+        "ru": "Ваш номер обновлен",
+        "en": "Your room has been updated",
+        "kg": "Сиздин номер жаңыртылды"
+      },
+      "returnPreviousChoice": {
+        "ru": "Вернуть предыдущий выбор",
+        "en": "Return previous choice",
+        "kg": "Алдыңкы тандоону калыбына келтирүү"
+      },
+      "from": {
+        "ru": "с",
+        "en": "from",
+        "kg": "баштап"
+      },
+      "breakfast": {
+        "ru": "Завтрак",
+        "en": "Breakfast",
+        "kg": "Таңкы тамак"
+      },
+      "places": {
+        "ru": "мест",
+        "en": "places",
+        "kg": "орундар"
+      },
+      "citizenship": {
+        "ru": "Гражданство",
+        "en": "Citizenship",
+        "kg": "Жарандыгы"
+      },
+      "fillField": {
+        "ru": "Заполните поле",
+        "en": "Fill in the field",
+        "kg": "Талааны толтуруңуз"
+      },
+      "choosePayment": {
+        "ru": "Выберите способ оплаты",
+        "en": "Choose payment method",
+        "kg": "Төлөм ыкмасын тандаңыз"
+      },
+      "agreementText": {
+        "ru": "Я согласен с правилами онлайн-бронирования, обработкой персональных данных и политикой конфиденциальности",
+        "en": "I agree with the online booking rules, personal data processing, and privacy policy",
+        "kg": "Онлайн-брондоо эрежелерине, жеке маалыматтарды иштетүүгө жана купуялык саясатына макулмун"
+      },
+      "mustAgree": {
+        "ru": "Вы должны согласиться",
+        "en": "You must agree",
+        "kg": "Макул болушуңуз керек"
+      },
+      "mostConvenient": {
+        "ru": "Самый удобный способ",
+        "en": "The most convenient method",
+        "kg": "Эң ыңгайлуу ыкма"
+      },
+      "bankCard": {
+        "ru": "Банковская карта",
+        "en": "Bank card",
+        "kg": "Банк картасы"
+      },
+      "prepayment": {
+        "ru": "предоплата:",
+        "en": "prepayment:",
+        "kg": "алдын ала төлөм:"
+      },
+      "bookNow": {
+        "ru": "забронировать",
+        "en": "book now",
+        "kg": "брондоо"
+      },
+      "paymentPolicy": {
+        "ru": [
+          "Оплачивается вся сумма брони.",
+          "При бронировании номера необходимо внести полную невозмещаемую предоплату за проживание плюс налог (при неявке, отмене или изменении бронирования возврат средств не производится).",
+          "Кассовый чек и все подтверждающие документы о проживании и оказанных услугах за весь период мы отправим вам на электронную почту, указанную при бронировании."
+        ],
+        "en": [
+          "The full booking amount is charged.",
+          "A full non-refundable prepayment including tax is required when booking a room (in case of no-show, cancellation, or changes no refund will be issued).",
+          "A receipt and all supporting documents for your stay and services will be sent to your email specified during booking."
+        ],
+        "kg": [
+          "Брондолгон сумма толугу менен төлөнөт.",
+          "Номерди брондоо учурунда жашоо үчүн толук кайтарылгыс алдын ала төлөм жана салык талап кылынат (келбей калсаңыз, жокко чыгарсаңыз же өзгөртсөңүз акча кайтарылбайт).",
+          "Жашоо жана көрсөтүлгөн кызматтар тууралуу бардык ырастоочу документтер жана кассалык чек брондоодо көрсөтүлгөн электрондук почтага жөнөтүлөт."
+        ]
+      },
+      "choose": {
+        "ru": "выбрать",
+        "en": "choose",
+        "kg": "тандоо"
+      },
+      "roomsLabel": {
+        "ru": "все номера",
+        "en": "all rooms",
+        "kg": "бардык бөлмөлөр"
+      }
+    
+  }
+  

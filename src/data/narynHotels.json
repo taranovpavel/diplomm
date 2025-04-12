@@ -1,50 +1,104 @@
 [
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "353",
-      "label": "Премиум с террасой King Премиум с террасой King Премиум с террасой King",
-      "price": 300,
-      "rooms": "1"
+  {
+    "img": "/img-hotel1.webp",
+    "people": 2,
+    "meters": "30",
+    "label": {
+      "ru": "Классик",
+      "en": "Classic",
+      "kg": "Классик"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "1",
-      "price": 3000,
-      "rooms": "1"
+    "text": {
+      "ru": "Уютный номер с базовыми удобствами, идеально подходящий для краткосрочного пребывания. Вид на горы.",
+      "en": "Cozy room with basic amenities, ideal for a short stay. Mountain view.",
+      "kg": "Жумшак номер, негизги ыңгайлуулуктар менен, кыска мөөнөттүк эс алуу үчүн ылайыктуу. Тоолорго көрүнүш."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "2",
-      "price": 300,
-      "rooms": "1"
+    "price": 70,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel2.webp",
+    "people": 2,
+    "meters": "38",
+    "label": {
+      "ru": "Стандарт",
+      "en": "Standard",
+      "kg": "Стандарт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "3",
-      "price": 300,
-      "rooms": "1"
+    "text": {
+      "ru": "Комфортный номер с видом на город. Queen-size кровать, кондиционер, зона для работы.",
+      "en": "Comfortable room with a city view. Queen-size bed, air conditioning, work area.",
+      "kg": "Ыңгайлуу номер, шаарга көрүнүшү менен. Queen-size керебет, кондиционер, иштөө аймагы."
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "4",
-      "price": 300,
-      "rooms": "1"
+    "price": 110,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel3.webp",
+    "people": 2,
+    "meters": "50",
+    "label": {
+      "ru": "Комфорт",
+      "en": "Comfort",
+      "kg": "Комфорт"
     },
-    {
-      "img": "/hotel1.jpg",
-      "people": 2,
-      "meters": "53",
-      "label": "5",
-      "price": 300,
-      "rooms": "1"
-    }
-  ]
+    "text": {
+      "ru": "Просторный номер с видом на горы, балконом и зоной отдыха. Отличное место для расслабления после активного дня.",
+      "en": "Spacious room with mountain view, balcony, and relaxation area. A great place to unwind after an active day.",
+      "kg": "Ичи кең, тоолорго көрүнүшү менен, балкону жана эс алуу аймагы бар. Активдүү күндөн кийин эс алуу үчүн мыкты жер."
+    },
+    "price": 160,
+    "rooms": "1"
+  },
+  {
+    "img": "/img-hotel4.webp",
+    "people": 2,
+    "meters": "70",
+    "label": {
+      "ru": "Джуниор Сюит",
+      "en": "Junior Suite",
+      "kg": "Жюниор Сюит"
+    },
+    "text": {
+      "ru": "Номер с отдельной зоной отдыха, панорамными окнами и видом на живописные горы Нарына.",
+      "en": "Room with a separate relaxation area, panoramic windows, and a view of the picturesque Naryn mountains.",
+      "kg": "Конок бөлмөсү менен, панорамалык терезелер жана Нарындын кооз тоолоруна көрүнүшү."
+    },
+    "price": 230,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel5.webp",
+    "people": 2,
+    "meters": "100",
+    "label": {
+      "ru": "Сюит",
+      "en": "Suite",
+      "kg": "Сюит"
+    },
+    "text": {
+      "ru": "Просторный номер с отдельной спальней, гостиной и балконом с видом на горные пейзажи. Идеален для долгого отдыха.",
+      "en": "Spacious room with a separate bedroom, living room, and balcony with mountain views. Ideal for a long stay.",
+      "kg": "Ичи кең, өз алдынча уктоо бөлмөсү, конок бөлмөсү жана тоолорго көрүнүшү бар балкону. Узун мөөнөттүк эс алуу үчүн эң жакшы."
+    },
+    "price": 350,
+    "rooms": "2"
+  },
+  {
+    "img": "/img-hotel6.webp",
+    "people": 2,
+    "meters": "160",
+    "label": {
+      "ru": "Премиум с террасой King",
+      "en": "Premium with King Terrace",
+      "kg": "Премиум King террасасы менен"
+    },
+    "text": {
+      "ru": "Роскошный люкс с личной террасой, панорамным видом на горы, уникальным интерьером и индивидуальным обслуживанием.",
+      "en": "Luxurious suite with a private terrace, panoramic mountain views, unique interior, and personalized service.",
+      "kg": "Жогорку деңгээлдеги люкс, өз алдынча терраса, панорамалык тоо көрүнүштөрү, уникалдуу интерьер жана өзгөчө кызмат."
+    },
+    "price": 550,
+    "rooms": "3"
+  }
+]

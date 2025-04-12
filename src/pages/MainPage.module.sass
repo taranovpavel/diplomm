@@ -24,19 +24,19 @@
             gap: 14px
             border-radius: 2px
             &__name
-                font-size: 42px
+                font-size: 32px
                 font-weight: 700
             &__text    
-                font-size: 22px
+                font-size: 18px
             &__button
                 padding: 10px 24px
-                font-size: 22px
+                font-size: 18px
                 border: 1px #eee solid  
                 background-color: #00000000
                 color: #eee
                 cursor: pointer
                 transition: 0.3s
-                height: 48px
+                height: 44px
                 &:hover
                     background-color: #eee
                     color: #111 
@@ -82,7 +82,7 @@
                             transition: 0.3s
                             // object-fit: cover
                     &__container
-                        width: 340px
+                        width: 360px
                         display: flex
                         flex-direction: column
                         align-items: start
@@ -104,12 +104,19 @@
                         &__H
                             font-size: 24px
                         &__text
+                            height: 70px
                             font-size: 16px      
                     &:hover
                         .Main__hotels__inner__cards__card__imgContainer__img
                             scale: 1.1                        
     &__rooms
         padding: 0 0 50px
+        &__label
+            padding: 0 0 30px
+            font-size: 32px
+            font-weight: 700
+            width: 1300px
+            margin: 0 auto
     &__restorans
         margin: 0 0 50px
         background-color: #111
@@ -147,6 +154,7 @@
                         transition: 0.3s
                         align-items: center
                         cursor: pointer
+                        color: #eee
                         &__brTop
                             width: 180px
                             height: 2px 
@@ -170,7 +178,6 @@
                 width: 450px
                 overflow: hidden
                 position: relative
-                cursor: pointer
                 &__inner
                     background-position: center
                     background-repeat: no-repeat
@@ -186,12 +193,6 @@
                     left: 20px
                     top: 20px
                     border: 2px solid #eee
-                &:hover
-                    .Main__restorans__inner__right__inner
-                        scale: 1.2
-                        &__br
-                            scale:1
-
             &__btn
                 position: absolute                           
                 bottom: 0
@@ -209,6 +210,11 @@
                     border: 1px solid #eee
                     color: #eee
                     border-bottom: none
+        &:hover
+            .Main__restorans__inner__right__inner
+                scale: 1.2
+                &__br
+                    scale:1          
     &__contacts
         padding: 0 0 50px
         &__inner

@@ -1,0 +1,65 @@
+{
+    "btn": {
+        "ru": "подробнее",
+        "en": "learn More",
+        "kg": "көбүрөөк маалымат"
+    },
+    "btn1": {
+        "ru": "забронировать",
+        "en": "book Now",
+        "kg": "брондоо"
+    },
+    "label": {
+        "ru": "Изумительные отели в красивейших уголках Кыргызстана",
+        "en": "Stunning hotels in the most beautiful corners of Kyrgyzstan",
+        "kg": "Кыргызстандын эң кооз бурчтарындагы керемет мейманканалар"
+    },
+    "cards": [
+      {
+        "label": {
+          "ru": "Бишкек",
+          "en": "Bishkek",
+          "kg": "Бишкек"
+        },
+        "text": {
+          "ru": "История, природа, культура и современный ритм: всё это в Бишкеке, Ала-Арче и у Башни Бурана.",
+          "en": "History, nature, culture, and modern rhythm: all this can be found in Bishkek, Ala-Archa, and the Burana Tower.",
+          "kg": "Тарых, табият, маданият жана азыркы заман: мунун бардыгы Бишкекте, Ала-Арчада жана Бурана мунарасында."
+        },
+        "img": "/img-bishkek.webp",
+        "link": "/bishkek",
+        "linkBook": "./bishkek"
+      },
+      {
+        "label": {
+          "ru": "Иссык-Куль",
+          "en": "Issyk-Kul",
+          "kg": "Ыссык-Көл"
+        },
+        "text": {
+          "ru": "Величие природы, традиции — всё это в Иссык-Куле, на берегах его лазурных вод, среди гор Тянь-Шаня.",
+          "en": "The grandeur of nature, traditions — all this in Issyk-Kul, on the shores of its azure waters, among the Tian Shan mountains.",
+          "kg": "Табияттын даңктуулугу, салттар — мунун бардыгы Ыссык-Көлдө, анын асмандай көгүлтүр сууларынын жээгинде, Тянь-Шань тоолорунун арасында."
+        },
+        "img": "/img-issyk-kul.webp",
+        "link": "/issyk-kul",
+        "linkBook": "./issyk-kul"
+      },
+      {
+        "label": {
+          "ru": "Нарын",
+          "en": "Naryn",
+          "kg": "Нарын"
+        },
+        "text": {
+          "ru": "Горная тишина, дух Великого шелкового пути, кочевые легенды и жизнь, идущая в ногу с традицией.",
+          "en": "Mountain silence, the spirit of the Great Silk Road, nomadic legends, and a life that goes hand in hand with tradition.",
+          "kg": "Тоолордун тынчтыгы, Улуу Жибек жолунун руху, көчмөндөрдүн уламыштары жана салттар менен жүргөн жашоо."
+        },
+        "img": "/img-naryn.webp",
+        "link": "/naryn",
+        "linkBook": "./naryn"
+      }
+    ]
+  }
+  

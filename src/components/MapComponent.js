@@ -1,9 +1,7 @@
-import { YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 import React, {useState} from 'react';
+import { YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
 const MapComponent = ({placemark, setPlacemark}) => {
-    
-
   const handleMapClick = (event) => {
     const coords = event.get("coords");
     setPlacemark({ coordinates: coords, hint: "Новая метка" });
